@@ -22,5 +22,20 @@
   </dependencies>
   <build>
     <finalName>home</finalName>
+	<pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.0</version>
+				<configuration>
+					<url>http://localhost:8080/manager/text</url>
+					<update>true</update>
+					<server>jenkins-bot</server> <!-- reference to /conf/settings.xml -->
+					<path>/</path> <!-- where to deploy app (context root) -->
+				</configuration>
+			</plugin>
+		</plugins>
+	</pluginManagement>
   </build>
 </project>
