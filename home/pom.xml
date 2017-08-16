@@ -15,8 +15,8 @@
       <scope>test</scope>
     </dependency>
 	<dependency>
-		<groupId>com.oracle.jdbc</groupId>
-		<artifactId>ojdbc7</artifactId>
+		<groupId>com.oracle</groupId>
+		<artifactId>ojdbc8</artifactId>
 		<version>12.2.0.1</version>
 </dependency>
   </dependencies>
