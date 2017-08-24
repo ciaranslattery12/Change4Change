@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>March Of Dimes</title>
+<link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.js"></script>
+<script type="text/javascript" src="../route.js"></script> <!-- init needs angular, so needed first -->
+<script type="text/javascript" src="../event.js"></script>
+</head>
+<body ng-app="C4C">
+<div>
+	<nav class="navbar navbar-inverse navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+	  		<a href="#" class="navbar-brand" style="font-size: 3em;">C4C<span class="inverse" style="color: #35d64a;">$</span></a>
+	    </div>
+	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9"> 
+		  <ul class="nav navbar-nav"> 
+			  <li class="active"><a href="#home">Home</a></li> 
+			  <li><a href="#event">Events</a></li> 
+			  <li><a href="#gallery">Gallery</a></li>
+		  </ul> 
+	  </div>
+	</div>
+	</nav>
+</div>
+	<div class="container">
+
+		<div ng-view class="view">
+			<!-- inject a view here: manage.html, create.html -->
+		</div>
+
+	</div>
+<div class="navbar navbar-default navbar-fixed-bottom" id="this">
+	<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-footer">
+			<ul class="nav navbar-nav" style="float: right;">
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+</div>
+</body>
+</html>
