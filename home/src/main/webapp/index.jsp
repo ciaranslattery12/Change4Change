@@ -1,5 +1,6 @@
+<!DOCTYPE html>
 <html>
 <body>
-<h2>Hello Continuous Integration!</h2>
+<h2>Hello it's me!</h2>
 </body>
 </html>
