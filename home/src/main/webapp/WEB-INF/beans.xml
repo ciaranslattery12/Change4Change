@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
+
+	<import resource="classpath:dao-beans.xml"/>
+
+	<context:annotation-config /> <!-- @Autowired -->
+	<mvc:annotation-driven /> <!-- @Controller @RequestMapping -->
+	
+	<!-- where to find/how to map resources by URI -->
+	<mvc:resources location="/static/**" mapping="/**"/>
+	
+	<!-- ViewResolver does forwards/redirect -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/pages/" />
+		<property name="suffix" value=".html" />
+		<!-- give ViewResolver a String "home" and it resolves as:
+								/pages/home.html -->
+	</bean>
+
+	<!-- Spring core/context: find beans and auto-register -->
+	<context:component-scan base-package="home" />
+
+</beans>
