@@ -13,7 +13,7 @@ public class ChangeForChangeTests {
 
 	@Autowired
 	protected JdbcTemplate jdbcTemplate;
-	private static ApplicationContext context;
+	protected static ApplicationContext context;
 	
 	@BeforeClass
 	public static void initialize(){

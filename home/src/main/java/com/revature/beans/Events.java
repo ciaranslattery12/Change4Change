@@ -3,6 +3,9 @@ package com.revature.beans;
 import java.sql.Timestamp;
 import java.util.Set;
 
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,7 +13,7 @@ import javax.persistence.*;
 public class Events {
 	
 	@Id
-	@JoinColumn(nullable=false, name="EVENT_ID")
+	@Column(name="EVENT_ID")
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int eventId;
 	
@@ -45,10 +48,9 @@ public class Events {
 		super();
 	}
 
-	public Events(int eventId, int maxCapacity, Timestamp eventDate, String eventDescription, Set<Users> users,
+	public Events(int maxCapacity, Timestamp eventDate, String eventDescription, Set<Users> users,
 			EventType eventType, Users user, EventStatus eventStatus) {
 		super();
-		this.eventId = eventId;
 		this.maxCapacity = maxCapacity;
 		this.eventDate = eventDate;
 		this.eventDescription = eventDescription;

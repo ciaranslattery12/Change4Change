@@ -20,7 +20,7 @@
 	<!-- 2. SessionFactory -->
 	<bean name="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="packagesToScan" value="home" /><!-- @Entity -->
+		<property name="packagesToScan" value="com.revature.beans" /><!-- @Entity -->
 		<property name="hibernateProperties">
 			<props>
 				<prop key="hibernate.hbm2ddl.auto">update</prop>
@@ -36,9 +36,9 @@
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	
-	<!-- 4. DAO 
-	<bean name="gameDAO" class="com.revature.data.GameDAO">
+	<!-- 4. DAO -->
+	<bean name="eventDAO" class="com.revature.data.services.EventDAO">
 		<property name="sessionFactory" ref="sessionFactory" />
-	</bean> -->
+	</bean> 
 	
 </beans>
