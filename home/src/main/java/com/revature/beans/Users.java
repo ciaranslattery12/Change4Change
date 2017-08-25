@@ -59,6 +59,19 @@ public class Users {
 		this.email = email;
 		this.userRoleId = userRoleId;
 	}
+	
+	
+
+	public Users(String firstName, String lastName, String userName, String password, String email,
+			UsersRole userRoleId) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.userRoleId = userRoleId;
+	}
 
 	public int getUsersId() {
 		return usersId;

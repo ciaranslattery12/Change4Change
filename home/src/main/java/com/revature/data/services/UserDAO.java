@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.revature.beans.Users;
 
-public class UserDAO {
+public class UserDAO implements UserDAOManager {
 
 	private SessionFactory sessionFactory;
 
