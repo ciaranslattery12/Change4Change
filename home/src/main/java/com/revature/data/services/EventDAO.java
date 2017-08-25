@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.revature.beans.Events;
 
-public class EventDAO {
+public class EventDAO implements EventDAOManager{
 
 	private SessionFactory sessionFactory;
 
