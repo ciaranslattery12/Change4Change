@@ -6,6 +6,7 @@ import java.util.Set;
 import javax.persistence.*;
 
 @Entity
+@Table(name="EVENTS")
 public class Events {
 	
 	@Id
@@ -20,9 +21,9 @@ public class Events {
 	private Timestamp eventDate;
 	
 	@ManyToMany(mappedBy="events")
-	private Set<User> users;
+	private Set<Users> users;
 	
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name="EVENT_TYPE_ID", nullable=false)
 	private EventType eventType;
 	

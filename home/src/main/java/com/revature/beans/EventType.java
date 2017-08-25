@@ -1,8 +1,11 @@
 package com.revature.beans;
 
+import java.util.Set;
+
 import javax.persistence.*;
 
 @Entity
+@Table(name="EVENT_TYPE")
 public class EventType {
 
 	@Id
@@ -12,4 +15,6 @@ public class EventType {
 	@Column(name="EVENT_TYPE_DESCRIPTION")
 	private String eventTypeDescription;
 	
+	@OneToMany(mappedBy="eventType")
+	private Set<Events> events;
 }
