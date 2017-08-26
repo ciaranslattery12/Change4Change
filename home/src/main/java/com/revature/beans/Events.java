@@ -10,7 +10,7 @@ import javax.persistence.*;
 public class Events {
 	
 	@Id
-	@JoinColumn(nullable=false, name="EVENT_ID")
+	@Column(nullable=false, name="EVENT_ID")
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int eventId;
 	

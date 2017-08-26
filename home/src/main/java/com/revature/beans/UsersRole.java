@@ -18,9 +18,6 @@ public class UsersRole {
 	
 	@Column(name="USER_ROLE_TYPE", nullable=false)
 	private String userRoleType;
-	
-	@OneToMany(mappedBy="userRoleId")
-	private Set<Users> users;
 
 	public UsersRole() {
 		super();
@@ -48,13 +45,33 @@ public class UsersRole {
 		this.userRoleType = userRoleType;
 	}
 
-	public Set<Users> getUsers() {
-		return users;
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + userRoleId;
+		result = prime * result + ((userRoleType == null) ? 0 : userRoleType.hashCode());
+		return result;
 	}
 
-	public void setUsers(Set<Users> users) {
-		this.users = users;
-	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		UsersRole other = (UsersRole) obj;
+		if (userRoleId != other.userRoleId)
+			return false;
+		if (userRoleType == null) {
+			if (other.userRoleType != null)
+				return false;
+		} else if (!userRoleType.equals(other.userRoleType))
+			return false;
+		return true;
+	}	
 	
 	
 }

@@ -18,9 +18,6 @@ public class EventStatus {
 	
 	@Column(name="EVENT_STATUS_DESCRIPTION")
 	private String eventStatusDescription;
-	
-	@OneToMany(mappedBy="eventStatus")
-	private Set<Events> events;
 
 	public EventStatus() {
 		super();
@@ -30,7 +27,6 @@ public class EventStatus {
 		super();
 		this.eventStatusId = eventStatusId;
 		this.eventStatusDescription = eventStatusDescription;
-		this.events = events;
 	}
 
 	public int getEventStatusId() {
@@ -48,14 +44,5 @@ public class EventStatus {
 	public void setEventStatusDescription(String eventStatusDescription) {
 		this.eventStatusDescription = eventStatusDescription;
 	}
-
-	public Set<Events> getEvents() {
-		return events;
-	}
-
-	public void setEvents(Set<Events> events) {
-		this.events = events;
-	}
-	
 	
 }
