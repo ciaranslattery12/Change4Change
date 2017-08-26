@@ -4,6 +4,9 @@ import java.util.Set;
 
 import javax.persistence.*;
 
+//import org.hibernate.annotations.Cascade;
+//import org.hibernate.annotations.CascadeType;
+
 @Entity
 @Table(name="USERS")
 public class Users {
@@ -33,6 +36,10 @@ public class Users {
 	
 	@ManyToOne
 	private UsersRole userRole;
+	
+	@ManyToOne//(cascade = {CascadeType.ALL})
+	@JoinColumn(nullable=false, name="ROLE_ID")
+	private UsersRole userRoleId;
 	
 	@ManyToMany
 	@JoinTable(name="SUBSCRIBERS",

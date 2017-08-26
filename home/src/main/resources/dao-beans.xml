@@ -35,8 +35,7 @@
 	<bean name="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
-	
-	
+		
 	<!-- 4. DAO -->
 	<bean name="userDAO" class="com.revature.data.services.UserDAO">
 		<property name="sessionFactory" ref="sessionFactory" />
@@ -45,5 +44,10 @@
 	<bean name="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
+	
+	<!-- 4. DAO -->
+	<bean name="eventDAO" class="com.revature.data.services.EventDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean> 
 	
 </beans>
