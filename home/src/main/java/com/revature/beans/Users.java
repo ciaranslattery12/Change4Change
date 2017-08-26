@@ -34,20 +34,16 @@ public class Users {
 	@Column(name="USERS_BIO")
 	private String usersBio;
 	
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.PERSIST, fetch=FetchType.EAGER)
 	private UsersRole userRole;
 	
-	@ManyToOne//(cascade = {CascadeType.ALL})
-	@JoinColumn(nullable=false, name="ROLE_ID")
-	private UsersRole userRoleId;
-	
-	@ManyToMany
+	@ManyToMany(cascade=CascadeType.PERSIST, fetch=FetchType.EAGER)
 	@JoinTable(name="SUBSCRIBERS",
 	joinColumns=@JoinColumn(name="SUBSCRIBER_ID", referencedColumnName="USERS_ID"),
 	inverseJoinColumns=@JoinColumn(name="EVENT_NUMBER", referencedColumnName="EVENT_ID"))
 	private Set<Events> events;
 	
-	@OneToMany(mappedBy="user")
+	@OneToMany(mappedBy="user", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	private Set<Events> ownedEvents;
 
 	public Users() {

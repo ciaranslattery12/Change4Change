@@ -3,10 +3,19 @@ package com.revature.beans;
 import java.sql.Timestamp;
 import java.util.Set;
 
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.CascadeType;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
-import javax.persistence.*;
+
 
 @Entity
 @Table(name="EVENTS")
@@ -26,22 +35,22 @@ public class Events {
 	@Column(name="EVENT_DESCRIPTION")
 	private String eventDescription;
 	
-	@ManyToMany(mappedBy="events")
+	@ManyToMany(mappedBy="events", cascade=CascadeType.PERSIST)
 	private Set<Users> users;
 	
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.PERSIST)
 	@JoinColumn(name="EVENT_TYPE_ID", nullable=false)
 	private EventType eventType;
 	
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.PERSIST)
 	@JoinColumn(name="EVENT_AUTHOR", nullable=false)
 	private Users user;
 	
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.PERSIST)
 	@JoinColumn(name="EVENT_STATUS_ID", nullable=false)
 	private EventStatus eventStatus;
 	
-	@OneToMany(mappedBy="event")
+	@OneToMany(mappedBy="event", cascade=CascadeType.ALL)
 	private Set<Photos> photos;
 
 	public Events() {

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -39,12 +40,10 @@ public class UserDAO implements UserDAOManager {
 		sessionFactory.getCurrentSession().delete(user);
 	}
 
+	@Transactional
 	public Users findById(int userId){
-		String queryString = "FROM Users WHERE userId = :userId";
-		Query query = sessionFactory.getCurrentSession().createQuery(queryString);
-		query.setInteger("userId", userId);
-		Object result = query.uniqueResult();
-		return (Users)result;
+		return (Users) sessionFactory.getCurrentSession().createCriteria(Users.class).
+				add(Restrictions.eq("usersId", userId)).uniqueResult();
 	}
 
 	@Transactional

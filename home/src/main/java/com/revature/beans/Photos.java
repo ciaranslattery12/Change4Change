@@ -16,7 +16,7 @@ public class Photos {
 	@Column(name="PHOTO_IMAGE")
 	private Blob photoBlob;
 	
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.PERSIST)
 	@JoinColumn(name="PHOTO_AUTHOR")
 	private Events event;
 
