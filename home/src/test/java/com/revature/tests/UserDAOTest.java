@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import org.apache.log4j.Logger;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.revature.beans.Users;
 import com.revature.beans.UsersRole;

@@ -14,6 +14,7 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -38,6 +39,7 @@ public class EventDAOTests extends ChangeForChangeTests {
 		context = new ClassPathXmlApplicationContext("dao-beans.xml");
 	}
 	
+	@Ignore
 	@Test
 	public void createTest() throws ParseException{
 		
