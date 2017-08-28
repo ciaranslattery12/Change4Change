@@ -29,6 +29,8 @@ public class PhotoDAO implements PhotoDAOManager {
 				add(Restrictions.eq("photoId", photoId)).uniqueResult();
 	}
 
+	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED,
+			rollbackFor=Exception.class)
 	public void destroy(Photos photo) {
 		sessionFactory.getCurrentSession().delete(photo);
 	}

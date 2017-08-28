@@ -9,12 +9,12 @@ import javax.persistence.*;
 public class Photos {
 
 	@Id
-	@JoinColumn(nullable=false, name="PHOTO_ID")
+	@Column(nullable=false, name="PHOTO_ID")
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int photoId;
 	
 	@Column(name="PHOTO_IMAGE")
-	private Blob photoBlob;
+	private byte[] image;
 	
 	@ManyToOne(cascade=CascadeType.PERSIST)
 	@JoinColumn(name="PHOTO_AUTHOR")
@@ -23,11 +23,17 @@ public class Photos {
 	public Photos() {
 		super();
 	}
-
-	public Photos(int photoId, Blob photoBlob, Events event) {
+	
+	public Photos(int photoId, byte[] image, Events event) {
 		super();
 		this.photoId = photoId;
-		this.photoBlob = photoBlob;
+		this.image = image;
+		this.event = event;
+	}
+
+	public Photos(byte[] image, Events event) {
+		super();
+		this.image = image;
 		this.event = event;
 	}
 
@@ -39,12 +45,12 @@ public class Photos {
 		this.photoId = photoId;
 	}
 
-	public Blob getPhotoBlob() {
-		return photoBlob;
+	public byte[] getImage() {
+		return image;
 	}
 
-	public void setPhotoBlob(Blob photoBlob) {
-		this.photoBlob = photoBlob;
+	public void setImage(byte[] image) {
+		this.image = image;
 	}
 
 	public Events getEvent() {
