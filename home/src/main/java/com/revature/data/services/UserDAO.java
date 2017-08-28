@@ -2,7 +2,6 @@ package com.revature.data.services;
 
 import java.util.List;
 
-import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.transaction.annotation.Isolation;
@@ -40,25 +39,29 @@ public class UserDAO implements UserDAOManager {
 		sessionFactory.getCurrentSession().delete(user);
 	}
 
-	@Transactional
+	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED,
+			rollbackFor=Exception.class)
 	public Users findById(int userId){
 		return (Users) sessionFactory.getCurrentSession().createCriteria(Users.class).
 				add(Restrictions.eq("usersId", userId)).uniqueResult();
 	}
 
-	@Transactional
+	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED,
+			rollbackFor=Exception.class)
 	@SuppressWarnings("unchecked")
 	public List<Users> findAll() {
 		return sessionFactory.getCurrentSession().createQuery("FROM Users").list();
 	}
 
-	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED)
+	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED,
+			rollbackFor=Exception.class)
 	public Users findByEmail(String email) {
 		return (Users) sessionFactory.getCurrentSession().createCriteria(Users.class).
 				add(Restrictions.eq("email", email)).uniqueResult();
 	}
 	
-	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED)
+	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED,
+			rollbackFor=Exception.class)
 	public Users findByUserName(String userName) {
 		return (Users) sessionFactory.getCurrentSession().createCriteria(Users.class).
 				add(Restrictions.eq("userName", userName)).uniqueResult();	}
