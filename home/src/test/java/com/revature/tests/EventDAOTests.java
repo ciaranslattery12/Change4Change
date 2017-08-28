@@ -23,6 +23,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import com.revature.beans.EventStatus;
 import com.revature.beans.EventType;
 import com.revature.beans.Events;
+import com.revature.beans.Photos;
 import com.revature.beans.Users;
 import com.revature.beans.UsersRole;
 import com.revature.data.services.EventDAOManager;
@@ -39,7 +40,7 @@ public class EventDAOTests extends ChangeForChangeTests {
 		context = new ClassPathXmlApplicationContext("dao-beans.xml");
 	}
 	
-	@Ignore
+	//@Ignore
 	@Test
 	public void createTest() throws ParseException{
 		
@@ -54,24 +55,19 @@ public class EventDAOTests extends ChangeForChangeTests {
 			//eventDAOManager = context.getBean(EventDAOManager.class);
 		
 		eventDAOManager = (EventDAOManager) context.getBean("eventDAO");
-		jdbcTemplate = (JdbcTemplate) context.getBean(JdbcTemplate.class);
 		
 		// instantiate custom types
-		EventType type = new EventType(1, "Diabetes", new HashSet<Events>());
-		EventStatus status = new EventStatus(1, "UPCOMING", new HashSet<Events>());
-		UsersRole role = new UsersRole(2, "USER");
-		Users user = new Users(1, "Bill", "Bob", "BillyB", "mypass", "billy@bee.com", role);
-		Set<Users> users = new HashSet<Users>();
+		EventType type = new EventType(1, "WALK");
+		EventStatus status = new EventStatus(1, "UPCOMING");
+		UsersRole role = new UsersRole(1, "ADMIN");
+		Users user = new Users(142, "Patrick", "Muldoon", "patrickM" , "password", "patrick@example.com", role);
 		
 		// construct event and create
-		Events newEvent = new Events(250, new Timestamp(time), "Diabetes Walk", users, type, user, status);
+		Events newEvent = new Events(250, new Timestamp(time), "Diabetes Walk", type, user, status);
 		Long rowCount = jdbcTemplate.queryForObject(EVENT_COUNT, Long.class);
-		System.out.println("rowCount: " + rowCount);
 		eventDAOManager.create(newEvent);
-		System.out.println("event created");
 		Long newRowCount = jdbcTemplate.queryForObject(EVENT_COUNT, Long.class);
-		System.out.println(newRowCount);
-		++rowCount;
-		assertEquals(rowCount, newRowCount);
+
+		assertEquals(++rowCount, newRowCount);
 	}
 }

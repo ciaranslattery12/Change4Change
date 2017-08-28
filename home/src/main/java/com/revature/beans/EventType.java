@@ -19,7 +19,7 @@ public class EventType {
 		super();
 	}
 
-	public EventType(int eventTypeId, String eventTypeDescription, Set<Events> events) {
+	public EventType(int eventTypeId, String eventTypeDescription) {
 		super();
 		this.eventTypeId = eventTypeId;
 		this.eventTypeDescription = eventTypeDescription;

@@ -23,7 +23,7 @@ public class EventStatus {
 		super();
 	}
 
-	public EventStatus(int eventStatusId, String eventStatusDescription, Set<Events> events) {
+	public EventStatus(int eventStatusId, String eventStatusDescription) {
 		super();
 		this.eventStatusId = eventStatusId;
 		this.eventStatusDescription = eventStatusDescription;

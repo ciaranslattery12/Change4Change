@@ -58,12 +58,24 @@ public class Events {
 	}
 
 	public Events(int maxCapacity, Timestamp eventDate, String eventDescription, Set<Users> users,
-			EventType eventType, Users user, EventStatus eventStatus) {
+			EventType eventType, Users user, EventStatus eventStatus, Set<Photos> photos) {
 		super();
 		this.maxCapacity = maxCapacity;
 		this.eventDate = eventDate;
 		this.eventDescription = eventDescription;
 		this.users = users;
+		this.eventType = eventType;
+		this.user = user;
+		this.eventStatus = eventStatus;
+		this.photos = photos;
+	}
+	
+	public Events(int maxCapacity, Timestamp eventDate, String eventDescription,
+			EventType eventType, Users user, EventStatus eventStatus) {
+		super();
+		this.maxCapacity = maxCapacity;
+		this.eventDate = eventDate;
+		this.eventDescription = eventDescription;
 		this.eventType = eventType;
 		this.user = user;
 		this.eventStatus = eventStatus;
