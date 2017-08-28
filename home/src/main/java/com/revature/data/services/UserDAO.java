@@ -51,4 +51,15 @@ public class UserDAO implements UserDAOManager {
 	public List<Users> findAll() {
 		return sessionFactory.getCurrentSession().createQuery("FROM Users").list();
 	}
+
+	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED)
+	public Users findByEmail(String email) {
+		return (Users) sessionFactory.getCurrentSession().createCriteria(Users.class).
+				add(Restrictions.eq("email", email)).uniqueResult();
+	}
+	
+	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED)
+	public Users findByUserName(String userName) {
+		return (Users) sessionFactory.getCurrentSession().createCriteria(Users.class).
+				add(Restrictions.eq("userName", userName)).uniqueResult();	}
 }

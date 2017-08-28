@@ -20,6 +20,8 @@ public class UserDAOTest extends ChangeForChangeTests {
 	
 	private static final Logger logger = Logger.getLogger(UserDAOTest.class);
 	private static final String USER_COUNT = "select count(users_id) from Users";
+	private static final String USER_ID_Email = "select users_id from Users where email = 'patrick@example.com'";
+	private static final String USER_ID_USERNAME = "select users_id from Users where username = 'patrickM'";
 	
 	private static UserDAOManager userDAOManager;
 	
@@ -48,6 +50,24 @@ public class UserDAOTest extends ChangeForChangeTests {
 		Users actual = new Users("Patrick", "Muldoon", "patrickM" , "password", "patrick@example.com", 
 				"Just a trial Bio", role);
 		assertEquals(expected.getEmail(), actual.getEmail());
+	}
+	
+	@Test
+	public void userDAOTestRetriveByEmail(){
+		logger.info("Retrieve User by Email");
+		userDAOManager = (UserDAOManager) context.getBean("userDAO");
+		Users user = userDAOManager.findByEmail("patrick@example.com");
+		Long actualIdValue = jdbcTemplate.queryForObject(USER_ID_Email, Long.class);
+		assertEquals(user.getUsersId(), actualIdValue.intValue());
+	}
+	
+	@Test
+	public void userDAOTestRetrieveByUserName(){
+		logger.info("Retrieve User by UserName");
+		userDAOManager = (UserDAOManager) context.getBean("userDAO");
+		Users user = userDAOManager.findByUserName("patrickM");
+		Long actualIdValue = jdbcTemplate.queryForObject(USER_ID_USERNAME, Long.class);
+		assertEquals(user.getUsersId(), actualIdValue.intValue());
 	}
 	
 	@Test
