@@ -51,7 +51,7 @@
 	</bean> 
 	
 	<bean name="photoDAO" class="com.revature.data.services.PhotoDAO">
-		<property name="sessionFactory" ref="dataSource" />
+		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	
 </beans>
