@@ -3,33 +3,25 @@ package com.revature.tests;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
-import java.applet.AppletContext;
 import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.revature.beans.EventStatus;
 import com.revature.beans.EventType;
 import com.revature.beans.Events;
-import com.revature.beans.Photos;
 import com.revature.beans.Users;
 import com.revature.beans.UsersRole;
 import com.revature.data.services.EventDAOManager;
-import com.revature.data.services.UserDAOManager;
 
 public class EventDAOTests extends ChangeForChangeTests {
 
