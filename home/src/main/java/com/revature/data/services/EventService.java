@@ -3,17 +3,25 @@ package com.revature.data.services;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.revature.beans.Events;
 
+@Service
 public class EventService {
 
 	private EventDAOManager eventDAOManager;
 	private Logger logger;
 	
+	@Autowired
+	public void setEventDAOManager(EventDAOManager eventDAOManager) {
+		this.eventDAOManager = eventDAOManager;
+	}
+
 	@Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)
 	public void createEvent(Events event){
 		logger.debug("Event saved: " + event);
