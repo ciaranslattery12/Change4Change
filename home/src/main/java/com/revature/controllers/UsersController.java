@@ -25,6 +25,7 @@ import com.revature.data.services.UserService;
 public class UsersController {
 	
 	private static final Logger logger = Logger.getLogger(UsersController.class);
+	
 	private UserService userService;
 	
 	@Autowired
@@ -38,8 +39,9 @@ public class UsersController {
 	 *
 	 */
 	
-	@RequestMapping(value="admin/users/create", method=RequestMethod.POST,
-			consumes=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value="/users", method=RequestMethod.POST,
+			consumes=MediaType.APPLICATION_JSON_VALUE,
+			produces=MediaType.APPLICATION_JSON_VALUE)
 	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED, rollbackFor=Exception.class)
 	public ResponseEntity<Users> createUser(@Valid @RequestBody Users user){
 		logger.info("Creating New User: " + user);
@@ -54,8 +56,8 @@ public class UsersController {
 	 * 
 	 */
 	
-	@RequestMapping(value="admin/users/findById", method=RequestMethod.GET,
-			consumes=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value="/users/findById/{userId}", method=RequestMethod.GET,
+			produces=MediaType.APPLICATION_JSON_VALUE)
 	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED, rollbackFor=Exception.class)
 	public ResponseEntity<Users> findUserById(@PathVariable int userId){
 		logger.info("Finding User by Id number : " + userId);
@@ -63,8 +65,8 @@ public class UsersController {
 		return new ResponseEntity<Users>(user, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value="admin/users/findByUserName", method=RequestMethod.GET,
-			consumes=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value="/users/findByUserName", method=RequestMethod.GET,
+			produces=MediaType.APPLICATION_JSON_VALUE)
 	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED, rollbackFor=Exception.class)
 	public ResponseEntity<Users> findUserByUserName(@PathVariable String userName){
 		logger.info("Finding User by userName : " + userName);
@@ -72,8 +74,8 @@ public class UsersController {
 		return new ResponseEntity<Users>(user, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value="admin/users/findByEmail", method=RequestMethod.GET,
-			consumes=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value="/users/findByEmail", method=RequestMethod.GET,
+			produces=MediaType.APPLICATION_JSON_VALUE)
 	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED, rollbackFor=Exception.class)
 	public ResponseEntity<Users> findUserByEmail(@PathVariable String email){
 		logger.info("Finding User by email : " + email);
@@ -81,8 +83,8 @@ public class UsersController {
 		return new ResponseEntity<Users>(user, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value="admin/users/findAll", method=RequestMethod.GET,
-			consumes=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value="/users/findAll", method=RequestMethod.GET,
+			produces=MediaType.APPLICATION_JSON_VALUE)
 	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED, rollbackFor=Exception.class)
 	public ResponseEntity<List<Users>> findAllUsers(){
 		logger.info("Finding all Users in the Database");
@@ -98,8 +100,9 @@ public class UsersController {
 	 * 
 	 */
 	
-	@RequestMapping(value="admin/users/findAll", method=RequestMethod.POST,
-			consumes=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value="/users", method=RequestMethod.PUT,
+			consumes=MediaType.APPLICATION_JSON_VALUE,
+			produces=MediaType.APPLICATION_JSON_VALUE)
 	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED, rollbackFor=Exception.class)
 	public ResponseEntity<Void> updateUser(@Valid @RequestBody Users user){
 		logger.info("Updating User: " + user);
@@ -114,7 +117,7 @@ public class UsersController {
 	 * 
 	 */
 	
-	@RequestMapping(value="admin/users/deleteUser", method=RequestMethod.POST,
+	@RequestMapping(value="admin/users/deleteUser", method=RequestMethod.DELETE,
 			consumes=MediaType.APPLICATION_JSON_VALUE)
 	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED, rollbackFor=Exception.class)
 	public ResponseEntity<Void> deleteUser(@PathVariable int userId){

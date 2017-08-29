@@ -3,12 +3,14 @@ package com.revature.data.services;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.revature.beans.Users;
 
+@Service
 public class UserService {
 	
 	private Logger logger;
