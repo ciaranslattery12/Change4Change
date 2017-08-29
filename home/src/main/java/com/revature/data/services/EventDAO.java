@@ -39,6 +39,7 @@ public class EventDAO implements EventDAOManager{
 		sessionFactory.getCurrentSession().delete(event);
 	}
 
+	@Transactional
 	public Events findById(int eventId){
 		String queryString = "FROM Events WHERE eventId = :eventId";
 		Query query = sessionFactory.getCurrentSession().createQuery(queryString);
