@@ -80,6 +80,18 @@ public class UserDAOTest extends ChangeForChangeTests {
 	
 	@Ignore
 	@Test
+	public void userDAOTestUpdateUser(){
+		logger.info("Updating User");
+		Users user = userDAOManager.findById(142);
+		user.setFirstName("Paddrick");
+		userDAOManager.update(user);
+		Users expected = userDAOManager.findById(142);
+		assertEquals(expected.getUsersId(), user.getUsersId());
+		assertEquals(expected.getFirstName(), user.getFirstName());
+	}
+	
+	@Ignore
+	@Test
 	public void userDAOTestDelete(){
 		logger.info("Delete User");
 		userDAOManager = (UserDAOManager) context.getBean("userDAO");

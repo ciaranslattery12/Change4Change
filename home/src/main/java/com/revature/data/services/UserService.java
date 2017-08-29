@@ -41,7 +41,7 @@ public class UserService {
 	}
 	
 	@Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)
-	public Users findUser(int userId){
+	public Users findUserById(int userId){
 		logger.debug("Find user " + userId);
 		return userDAOManager.findById(userId);
 	}
@@ -49,5 +49,15 @@ public class UserService {
 	public List<Users> findAll(){
 		logger.debug("Finding all users");
 		return userDAOManager.findAll();
+	}
+	
+	public Users findUserByUserName(String userName){
+		logger.debug("Find User by userName: " + userName);
+		return userDAOManager.findByUserName(userName);
+	}
+	
+	public Users findUserByEmail(String email){
+		logger.debug("Find User by email: " + email);
+		return userDAOManager.findByEmail(email);
 	}
 }
