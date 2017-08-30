@@ -25,10 +25,9 @@ import com.revature.data.services.UserService;
 public class UsersController {
 	
 	private static final Logger logger = Logger.getLogger(UsersController.class);
-	
+	@Autowired
 	private UserService userService;
 	
-	@Autowired
 	public void setUserService(UserService userService){
 		this.userService = userService;
 	}

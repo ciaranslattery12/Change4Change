@@ -23,7 +23,7 @@
 	</bean>
 
 	<!-- Spring core/context: find beans and auto-register -->
-	<context:component-scan base-package="com.revature.data.services" />
+	<context:component-scan base-package="com.revature.*" />
 
 
 </beans>

@@ -3,6 +3,7 @@ package com.revature.data.services;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
@@ -15,7 +16,8 @@ public class UserService {
 	
 	private Logger logger;
 	private UserDAOManager userDAOManager;
-
+	
+	@Autowired
 	public UserDAOManager getUserDAOManager() {
 		return userDAOManager;
 	}
