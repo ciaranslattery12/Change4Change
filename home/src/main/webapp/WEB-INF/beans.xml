@@ -20,7 +20,6 @@
 				 http://localhost:8080/proj/static/index.html -->
 		<!-- given a string ex: "home", it is resolved to /pages/home.html -->
 	</bean>
-	
 	<context:component-scan base-package="com.revature"/>
 
 </beans>
