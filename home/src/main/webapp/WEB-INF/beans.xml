@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
 
 	<import resource="classpath:dao-beans.xml"/>
-	<import resource="classpath:configuration.xml"/>
+	<context:annotation-config />
+	<mvc:annotation-driven />
+	<mvc:resources location="/static/**" mapping="/**"/>
+	<!-- View resolver for forwards and redirects -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/pages/" />
+		<property name="suffix" value=".html" />
+		<!-- Ex: index.html is found at 
+				 http://localhost:8080/proj/index.html instead of 
+				 http://localhost:8080/proj/static/index.html -->
+		<!-- given a string ex: "home", it is resolved to /pages/home.html -->
+	</bean>
+	
+	<context:component-scan base-package="com.revature" />
+
 </beans>
