@@ -50,7 +50,6 @@ public class Users {
 	
 	
 	@OneToMany(mappedBy="user", cascade=CascadeType.ALL, fetch=FetchType.EAGER)
-	@JsonIgnore
 	private Set<Events> ownedEvents;
 
 	public Users() {

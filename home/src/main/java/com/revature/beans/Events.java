@@ -48,6 +48,7 @@ public class Events {
 	
 	@ManyToOne(cascade=CascadeType.PERSIST, fetch=FetchType.EAGER)
 	@JoinColumn(name="EVENT_AUTHOR", nullable=false)
+	@JsonIgnore
 	private Users user;
 	
 	@ManyToOne(cascade=CascadeType.PERSIST, fetch=FetchType.EAGER)

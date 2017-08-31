@@ -5,19 +5,19 @@ angular.module("C4C")
 		$locationProvider.hashPrefix("");
 		$routeProvider
 		.when("/home", {
-			templateUrl: "home.html",
+			templateUrl: "pages/home.html",
 			controller: "homeCtrl"
 		})
 		.when("/gallery", {
-			templateUrl: "gallery.html",
+			templateUrl: "pages/gallery.html",
 			controller: "galleryCtrl"
 		})
 		.when("/event", {
-			templateUrl: "event.html",
+			templateUrl: "pages/event.html",
 			controller: "eventCtrl"
 		})
 		.when("/user", {
-			templateUrl: "/static/pages/users.html",
+			templateUrl: "pages/users.html",
 			controller: "usersCtrl"
 		});
 	});
