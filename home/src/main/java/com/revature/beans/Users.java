@@ -43,7 +43,6 @@ public class Users {
 	private UsersRole userRole;
 	
 	@ManyToMany(cascade=CascadeType.PERSIST, fetch=FetchType.EAGER)
-	@LazyCollection(LazyCollectionOption.FALSE)
 	@JoinTable(name="SUBSCRIBERS",
 	joinColumns=@JoinColumn(name="SUBSCRIBER_ID", referencedColumnName="USERS_ID"),
 	inverseJoinColumns=@JoinColumn(name="EVENT_NUMBER", referencedColumnName="EVENT_ID"))

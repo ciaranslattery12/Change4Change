@@ -1,15 +1,18 @@
 package com.revature.services;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.revature.beans.Photos;
 
+@Service
 public class PhotoService {
 	
 	//private Logger logger;
 	private PhotoDAOManager photoDAOManager;
-	public PhotoDAOManager getPhotoDAOManager() {
-		return photoDAOManager;
-	}
+	
+	@Autowired
 	public void setPhotoDAOManager(PhotoDAOManager photoDAOManager) {
 		this.photoDAOManager = photoDAOManager;
 	}

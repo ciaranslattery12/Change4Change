@@ -15,5 +15,9 @@ angular.module("C4C")
 		.when("/event", {
 			templateUrl: "event.html",
 			controller: "eventCtrl"
+		})
+		.when("/user", {
+			templateUrl: "/static/pages/users.html",
+			controller: "usersCtrl"
 		});
 	});

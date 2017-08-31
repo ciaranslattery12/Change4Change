@@ -76,7 +76,7 @@ public class EventsController {
 	 * @param id
 	 * @return
 	 */
-	@RequestMapping(value="/flight", method=RequestMethod.DELETE)
+	@RequestMapping(value="/events", method=RequestMethod.DELETE)
 	public ResponseEntity<Void> delete(@RequestHeader Integer id){
 		this.eventService.deleteEvent(eventService.findEvent(id));
 		return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);

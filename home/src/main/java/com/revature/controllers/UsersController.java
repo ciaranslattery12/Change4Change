@@ -63,7 +63,7 @@ public class UsersController {
 		return new ResponseEntity<Users>(user, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value="/users/findByUserName", method=RequestMethod.GET,
+	@RequestMapping(value="/users/findByUserName/{userName}", method=RequestMethod.GET,
 			produces=MediaType.APPLICATION_JSON_VALUE)
 	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED, rollbackFor=Exception.class)
 	public ResponseEntity<Users> findUserByUserName(@PathVariable String userName){
@@ -72,7 +72,7 @@ public class UsersController {
 		return new ResponseEntity<Users>(user, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value="/users/findByEmail", method=RequestMethod.GET,
+	@RequestMapping(value="/users/findByEmail/{email}", method=RequestMethod.GET,
 			produces=MediaType.APPLICATION_JSON_VALUE)
 	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED, rollbackFor=Exception.class)
 	public ResponseEntity<Users> findUserByEmail(@PathVariable String email){
@@ -86,6 +86,7 @@ public class UsersController {
 	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED, rollbackFor=Exception.class)
 	public ResponseEntity<List<Users>> findAllUsers(){
 		//logger.info("Finding all Users in the Database");
+		System.out.println("made it to controller");
 		List<Users> users = userService.findAll();
 		return new ResponseEntity<List<Users>>(users, HttpStatus.OK);
 	}

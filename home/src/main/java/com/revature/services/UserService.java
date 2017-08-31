@@ -17,10 +17,6 @@ public class UserService {
 	private UserDAOManager userDAOManager;
 	
 	@Autowired
-	public UserDAOManager getUserDAOManager() {
-		return userDAOManager;
-	}
-
 	public void setUserDAOManager(UserDAOManager userDAOManager) {
 		this.userDAOManager = userDAOManager;
 	}
@@ -51,7 +47,9 @@ public class UserService {
 	
 	public List<Users> findAll(){
 		//logger.debug("Finding all users");
-		return userDAOManager.findAll();
+		List<Users> user = userDAOManager.findAll();
+		System.out.println(user.get(0).getFirstName());
+		return user;
 	}
 	
 	public Users findUserByUserName(String userName){

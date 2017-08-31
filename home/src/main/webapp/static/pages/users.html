@@ -1,0 +1,17 @@
+<div>
+	<h1>Users Pages</h1>
+	<table>
+		<thead>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Events</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="user in users">
+				<td>{{user.firstName}} {{user.lastName}}</td>
+				<td>{{user.email}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>
