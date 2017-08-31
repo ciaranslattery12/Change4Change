@@ -8,7 +8,6 @@
 	<name>home Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
-
 		<dependency>
 			<groupId>de.svenkubiak</groupId>
 			<artifactId>jBCrypt</artifactId>
