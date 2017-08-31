@@ -1,4 +1,4 @@
-package com.revature.data.services;
+package com.revature.services;
 
 import com.revature.beans.Photos;
 

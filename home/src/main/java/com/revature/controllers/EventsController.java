@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.validation.Valid;
 
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -21,12 +20,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.revature.beans.Events;
 import com.revature.beans.Users;
-import com.revature.data.services.EventService;
+import com.revature.services.EventService;
 
 @Controller
 public class EventsController {
 
-	private static final Logger logger = Logger.getLogger(UsersController.class);
+	//private static final Logger logger = Logger.getLogger(UsersController.class);
 	private EventService eventService;
 	
 	@Autowired
@@ -39,7 +38,7 @@ public class EventsController {
 			produces=MediaType.APPLICATION_JSON_VALUE)
 	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED, rollbackFor=Exception.class)
 	public ResponseEntity<Events> create(@Valid @RequestBody Events event){
-		logger.info("Creating New Event: " + event);
+		//logger.info("Creating New Event: " + event);
 		eventService.createEvent(event);
 		return new ResponseEntity<Events>(event, HttpStatus.CREATED);
 	}
@@ -48,7 +47,7 @@ public class EventsController {
 			produces=MediaType.APPLICATION_JSON_VALUE)
 	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED, rollbackFor=Exception.class)
 	public ResponseEntity<Events> findById(@PathVariable Integer eventId){
-		logger.info("Finding Event by Id number : " + eventId);
+		//logger.info("Finding Event by Id number : " + eventId);
 		Events event = eventService.findEvent(eventId);
 		return new ResponseEntity<Events>(event, HttpStatus.OK);
 	}
@@ -56,7 +55,7 @@ public class EventsController {
 	@RequestMapping(value="/events/find", method=RequestMethod.GET,
 			produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<Events>> findAll(){
-		logger.info("Finding all events");
+		//logger.info("Finding all events");
 		return new ResponseEntity<List<Events>>(this.eventService.findAll(), HttpStatus.OK);
 	}
 	

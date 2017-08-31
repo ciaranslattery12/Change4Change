@@ -2,19 +2,18 @@ package com.revature.tests;
 
 import static org.junit.Assert.assertEquals;
 
-import org.apache.log4j.Logger;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 
 import com.revature.beans.Events;
 import com.revature.beans.Photos;
-import com.revature.data.services.EventDAOManager;
-import com.revature.data.services.PhotoDAOManager;
+import com.revature.services.EventDAOManager;
+import com.revature.services.PhotoDAOManager;
 
 public class PhotoDAOTests extends ChangeForChangeTests {
 
-	private static final Logger logger = Logger.getLogger(PhotoDAOTests.class);
+	//private static final Logger logger = Logger.getLogger(PhotoDAOTests.class);
 	private static PhotoDAOManager photoDAOManager;
 	private static EventDAOManager eventDAOManager;
 	private static Events event;
@@ -30,7 +29,7 @@ public class PhotoDAOTests extends ChangeForChangeTests {
 	@Ignore
 	@Test
 	public void photoDAOTestCreate(){
-		logger.info("Creating photo");
+		//logger.info("Creating photo");
 		Photos photo = new Photos(new byte[1], event);
 		Long count = jdbcTemplate.queryForObject(PHOTO_COUNT, Long.class);
 		photoDAOManager.create(photo);
@@ -40,7 +39,7 @@ public class PhotoDAOTests extends ChangeForChangeTests {
 	
 	@Test
 	public void photoDAOTestFindById(){
-		logger.info("Finding photo by Id");
+		//logger.info("Finding photo by Id");
 		Photos expected = photoDAOManager.findByPhotoId(168);
 		Photos actual = new Photos(168, new byte[1], event);
 		assertEquals(expected.getPhotoId(), actual.getPhotoId());
@@ -51,7 +50,7 @@ public class PhotoDAOTests extends ChangeForChangeTests {
 	@Ignore
 	@Test
 	public void photoDAOTestDelete(){
-		logger.info("Delete photo");
+		//logger.info("Delete photo");
 		Photos photo = new Photos(168, new byte[1], event);
 		Long count = jdbcTemplate.queryForObject(PHOTO_COUNT, Long.class);
 		photoDAOManager.destroy(photo);

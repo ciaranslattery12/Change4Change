@@ -1,12 +1,11 @@
-package com.revature.data.services;
+package com.revature.services;
 
-import org.apache.log4j.Logger;
 
 import com.revature.beans.Photos;
 
 public class PhotoService {
 	
-	private Logger logger;
+	//private Logger logger;
 	private PhotoDAOManager photoDAOManager;
 	public PhotoDAOManager getPhotoDAOManager() {
 		return photoDAOManager;
@@ -16,17 +15,17 @@ public class PhotoService {
 	}
 
 	public void createNewPhoto(Photos photo){
-		logger.debug("Created Photo: " + photo);
+		//logger.debug("Created Photo: " + photo);
 		photoDAOManager.create(photo);
 	}
 	
 	public Photos findPhotoById(int photoId){
-		logger.debug("Finding Photo with id of: " + photoId);
+		//logger.debug("Finding Photo with id of: " + photoId);
 		return photoDAOManager.findByPhotoId(photoId);
 	}
 	
 	public void deletePhoto(Photos photo){
-		logger.debug("Deleting Photo: " + photo);
+		//logger.debug("Deleting Photo: " + photo);
 		photoDAOManager.destroy(photo);
 	}
 }

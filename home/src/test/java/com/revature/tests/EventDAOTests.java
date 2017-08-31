@@ -10,7 +10,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-import org.apache.log4j.Logger;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -21,11 +20,11 @@ import com.revature.beans.EventType;
 import com.revature.beans.Events;
 import com.revature.beans.Users;
 import com.revature.beans.UsersRole;
-import com.revature.data.services.EventDAOManager;
+import com.revature.services.EventDAOManager;
 
 public class EventDAOTests extends ChangeForChangeTests {
 
-	private static final Logger logger = Logger.getLogger(EventDAOTests.class);
+	//private static final Logger logger = Logger.getLogger(EventDAOTests.class);
 	private static final String EVENT_COUNT = "select count(event_id) from Events";
 	private static EventDAOManager eventDAOManager;
 
@@ -38,7 +37,7 @@ public class EventDAOTests extends ChangeForChangeTests {
 	@Test
 	public void createTest() throws ParseException {
 
-		logger.info("CREATE EVENT TEST");
+		//logger.info("CREATE EVENT TEST");
 
 		// set date in the future
 		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -89,7 +88,7 @@ public class EventDAOTests extends ChangeForChangeTests {
 	@Ignore
 	@Test
 	public void deleteTest() {
-		logger.info("Delete Event");
+		//logger.info("Delete Event");
 
 		eventDAOManager = (EventDAOManager) context.getBean("eventDAO");
 		Long rowCount =jdbcTemplate.queryForObject(EVENT_COUNT, Long.class);
@@ -105,7 +104,7 @@ public class EventDAOTests extends ChangeForChangeTests {
 	@Ignore
 	@Test
 	public void findByIdTest() throws ParseException {
-		logger.info("Find Event by ID");
+		//logger.info("Find Event by ID");
 
 		eventDAOManager = (EventDAOManager) context.getBean("eventDAO");
 
@@ -128,7 +127,7 @@ public class EventDAOTests extends ChangeForChangeTests {
 	@Ignore
 	@Test
 	public void findAllTest() {
-		logger.info("Find All Events");
+		//logger.info("Find All Events");
 
 		Long count = jdbcTemplate.queryForObject(EVENT_COUNT, Long.class);
 		eventDAOManager = (EventDAOManager) context.getBean("eventDAO");
