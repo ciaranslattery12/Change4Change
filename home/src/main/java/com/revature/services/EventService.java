@@ -47,6 +47,8 @@ public class EventService {
 	
 	public List<Events> findAll(){
 		//logger.debug("Finding all events");
-		return eventDAOManager.findAll();
+		List<Events> events = eventDAOManager.findAll();
+		System.out.println(events.get(0).toString());
+		return events;
 	}
 }

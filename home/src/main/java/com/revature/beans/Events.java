@@ -6,6 +6,7 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -14,6 +15,9 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 
@@ -35,22 +39,22 @@ public class Events {
 	@Column(name="EVENT_DESCRIPTION")
 	private String eventDescription;
 	
-	@ManyToMany(mappedBy="events", cascade=CascadeType.PERSIST)
+	@ManyToMany(mappedBy="events", cascade=CascadeType.PERSIST, fetch=FetchType.EAGER)
 	private Set<Users> users;
 	
-	@ManyToOne(cascade=CascadeType.PERSIST)
+	@ManyToOne(cascade=CascadeType.PERSIST, fetch=FetchType.EAGER)
 	@JoinColumn(name="EVENT_TYPE_ID", nullable=false)
 	private EventType eventType;
 	
-	@ManyToOne(cascade=CascadeType.PERSIST)
+	@ManyToOne(cascade=CascadeType.PERSIST, fetch=FetchType.EAGER)
 	@JoinColumn(name="EVENT_AUTHOR", nullable=false)
 	private Users user;
 	
-	@ManyToOne(cascade=CascadeType.PERSIST)
+	@ManyToOne(cascade=CascadeType.PERSIST, fetch=FetchType.EAGER)
 	@JoinColumn(name="EVENT_STATUS_ID", nullable=false)
 	private EventStatus eventStatus;
 	
-	@OneToMany(mappedBy="event", cascade=CascadeType.ALL)
+	@OneToMany(mappedBy="event", cascade=CascadeType.ALL, fetch=FetchType.EAGER)
 	private Set<Photos> photos;
 
 	public Events() {
@@ -163,6 +167,13 @@ public class Events {
 
 	public void setPhotos(Set<Photos> photos) {
 		this.photos = photos;
+	}
+
+	@Override
+	public String toString() {
+		return "Events [eventId=" + eventId + ", maxCapacity=" + maxCapacity + ", eventDate=" + eventDate
+				+ ", eventDescription=" + eventDescription + ", eventType=" + eventType
+				+ ", eventStatus=" + eventStatus + "]";
 	}
 	
 	

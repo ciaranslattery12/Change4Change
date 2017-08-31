@@ -1,8 +1,12 @@
 package com.revature.beans;
 
 import java.sql.Blob;
+import java.util.Arrays;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name="PHOTOS")
@@ -16,8 +20,9 @@ public class Photos {
 	@Column(name="PHOTO_IMAGE")
 	private byte[] image;
 	
-	@ManyToOne(cascade=CascadeType.PERSIST)
+	@ManyToOne(cascade=CascadeType.PERSIST, fetch=FetchType.EAGER)
 	@JoinColumn(name="PHOTO_AUTHOR")
+	@JsonIgnore
 	private Events event;
 
 	public Photos() {
@@ -59,6 +64,11 @@ public class Photos {
 
 	public void setEvent(Events event) {
 		this.event = event;
+	}
+
+	@Override
+	public String toString() {
+		return "Photos [photoId=" + photoId + ", image=" + Arrays.toString(image) + ", event=" + event + "]";
 	}
 	
 	

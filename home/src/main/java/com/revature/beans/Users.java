@@ -4,6 +4,11 @@ import java.util.Set;
 
 import javax.persistence.*;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 //import org.hibernate.annotations.Cascade;
 //import org.hibernate.annotations.CascadeType;
 
@@ -38,12 +43,15 @@ public class Users {
 	private UsersRole userRole;
 	
 	@ManyToMany(cascade=CascadeType.PERSIST, fetch=FetchType.EAGER)
+	@LazyCollection(LazyCollectionOption.FALSE)
 	@JoinTable(name="SUBSCRIBERS",
 	joinColumns=@JoinColumn(name="SUBSCRIBER_ID", referencedColumnName="USERS_ID"),
 	inverseJoinColumns=@JoinColumn(name="EVENT_NUMBER", referencedColumnName="EVENT_ID"))
 	private Set<Events> events;
 	
-	@OneToMany(mappedBy="user", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+	
+	@OneToMany(mappedBy="user", cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@JsonIgnore
 	private Set<Events> ownedEvents;
 
 	public Users() {
@@ -225,6 +233,14 @@ public class Users {
 		if (usersId != other.usersId)
 			return false;
 		return true;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Users [usersId=" + usersId + ", firstName=" + firstName + ", lastName=" + lastName + ", userName="
+				+ userName + ", password=" + password + ", email=" + email + ", usersBio=" + usersBio + ", userRole="
+				+ userRole + ", events=" + events + ", ownedEvents=" + ownedEvents + "]";
 	}
 	
 	
