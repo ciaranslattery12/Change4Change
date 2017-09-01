@@ -1,4 +1,5 @@
 var app = angular.module("C4C", ["ngRoute", 'ui.calendar']);
+
 angular.module("C4C")
 	.config(function($locationProvider, $routeProvider) {
 		
@@ -23,5 +24,13 @@ angular.module("C4C")
 		.when("/calendar", {
 			templateUrl: "pages/calendar.html",
 			controller: "calendarCtrl"
+		})
+		.when("/signup", {
+			templateUrl: "pages/signup.html",
+			controller: "signupCtrl"
+		})
+		.when("/login", {
+			templateUrl: "pages/login.html",
+			controller: "loginCtrl"
 		});
 	});

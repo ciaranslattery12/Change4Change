@@ -1,0 +1,15 @@
+<div class="alert alert-danger" ng-show="loginCtrl.error">
+    There was a problem logging in. Please try again.
+</div>
+<div>
+	<p>Enter username and password below<p>
+	<form role="form" ng-submit="loginUser()">
+		<div class="form-group">
+			Username: <input type="text" id="username" name="username" ng-model="user.username" /><br />
+		</div>
+		<div class="form-group">
+			Password: <input type="password" id="password" name="password" ng-model="user.password" /><br />
+		</div>
+		<input class="btn btn-primary" type="submit" value="Login" /><br />
+	</form>
+</div>
