@@ -6,7 +6,13 @@ angular.module("C4C").controller("loginCtrl",
 					url : "login",
 					data : $scope.user
 				}).then(function(response) {
-					console.log(data);
+					console.log(response);
+					if(response.data.userName != null){
+						console.log(response);
+						$location.path("/home");
+					} else {
+						$location.path("/login");
+					}
 				});
 			}
 		});

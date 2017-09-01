@@ -34,13 +34,14 @@ public class LoginController {
 	 * Does not forward, needs fixing
 	 */
 	@RequestMapping(value="/login", method=RequestMethod.POST)
-	public ModelAndView login(@RequestBody Users user, HttpServletRequest req){
+	public ResponseEntity<Users> login(@RequestBody Users user, HttpServletRequest req){
 		Users newUser = loginService.authenticate(user.getUserName(), user.getPassword());
+		System.out.println(newUser.toString());
 		if(newUser.getUserName() != null){
-			req.getSession().setAttribute("user", newUser);
-			return new ModelAndView("redirect:pages/home.html");
-		}else{
-			return new ModelAndView("redirect:pages/login.html");
+			req.getSession().setAttribute("loggedInUser", newUser);
+			return new ResponseEntity<Users>(newUser, HttpStatus.OK);
+		} else {
+			return new ResponseEntity<Users>(HttpStatus.NO_CONTENT);
 		}
 	}
 }
