@@ -1,6 +1,6 @@
 <div>
 	<h1>Users Pages</h1>
-	<table>
+	<table class="table table-bordered">
 		<thead>
 		<th>Name</th>
 		<th>Email</th>
@@ -10,6 +10,45 @@
 			<tr ng-repeat="user in users">
 				<td>{{user.firstName}} {{user.lastName}}</td>
 				<td>{{user.email}}</td>
+				<td>
+				<button type="button" class="btn btn-info btn-lg" ng-click="openModal(user)" data-toggle="modal" data-target="#{{$index}}">View</button>
+					<!-- Modal -->
+					<div class="modal fade" id="{{$index}}" role="dialog">
+					<div class="modal-dialog">
+						<!-- Model Content -->
+						<div class="modal-content">
+							<div class="modal-header">
+							<button type="button" class="glyphicon glyphicon-remove-circle" id="btnclose" data-dismiss="modal"
+									style="float: right; position: relative; top: 0; right: 0; font-size: 1.7em; 
+									appearance: none; -webkit-appearance: none; -moz-appearance: none; outline: none;
+    								border: 0; background: transparent;"></button>
+								<h2>Reimbursement Info</h2>
+							</div>
+							<div class="modal-body">
+								<table class="table table-bordered">
+								<thead>
+									<th>Event Title</th>
+									<th>Event Date</th>
+								</thead>
+									<tr ng-repeat="events in users.ownedEvents">
+										<td>{{events.eventDescription}}</td>
+										<td>{{events.startTime}}</td>
+									</tr>
+								</table>
+							</div>
+							<div class="modal-footer" ng-if="isAdmin">
+									<a href="#" class="btn btn-success" ng-click="approve(user)" 
+									ng-disabled="reimbursement.status !== 'Pending'" data-dismiss="modal">
+							          <span class="glyphicon glyphicon-thumbs-up"></span> Approve
+							        </a>
+									<a href="#" class="btn btn-danger" ng-click="deny(user)" 
+									data-dismiss="modal" ng-disabled="reimbursement.status !== 'Pending'">
+										<span class="glyphicon glyphicon-thumbs-down"></span> Deny
+									</a>
+							</div>
+						</div>
+					</div>	
+					</div></td>
 			</tr>
 		</tbody>
 	</table>

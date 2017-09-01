@@ -32,6 +32,9 @@ public class Events {
 	@Column(name="MAX_CAPACITY")
 	private int maxCapacity;
 	
+	@Column(name="EVENT_TITLE", nullable=false)
+	private String eventTitle;
+	
 	@Column(name="EVENT_START_TIME", nullable=false)
 	private Timestamp startTime;
 	
@@ -91,7 +94,7 @@ public class Events {
 	}
 	
 	public Events(int maxCapacity, Timestamp startTime, Timestamp endTime, String eventDescription,
-			EventType eventType, Users user, EventStatus eventStatus) {
+			EventType eventType, Users user, EventStatus eventStatus, String eventTitle) {
 		super();
 		this.maxCapacity = maxCapacity;
 		this.startTime = startTime;
@@ -99,6 +102,7 @@ public class Events {
 		this.eventDescription = eventDescription;
 		this.eventType = eventType;
 		this.user = user;
+		this.eventTitle = eventTitle;
 		this.eventStatus = eventStatus;
 	}
 
@@ -180,6 +184,14 @@ public class Events {
 
 	public void setPhotos(Set<Photos> photos) {
 		this.photos = photos;
+	}
+
+	public String getEventTitle() {
+		return eventTitle;
+	}
+
+	public void setEventTitle(String eventTitle) {
+		this.eventTitle = eventTitle;
 	}
 
 	@Override

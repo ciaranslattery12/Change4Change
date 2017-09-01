@@ -1,0 +1,35 @@
+<div class="container">
+	<div class="container-fluid" style="background-color: gray; margin-center: 10px; margin-bottom: 10px;">
+		<h2>Sign Up Today</h2>
+			<form ng-submit="createNewUser()" style="overflow-y: auto; max-height: 300px;">
+			<div class="container-fluid">
+				<div class="form-group">
+					<label>Username:</label>
+					<input type="text" class="form-control" ng-model="user.userName" required
+						minlength="4" maxlength="20">
+				</div>
+				<div class="form-group">
+					<label>First Name:</label>
+					<input type="text" class="form-control" ng-model="user.firstName" required>
+				</div>
+				<div class="form-group">
+					<label>Last Name:</label>
+					<input type="text" class="form-control" ng-model="user.lastName" required>
+				</div>
+				<div class="form-group">
+					<label>Email:</label>
+					<input type="text" class="form-control" ng-model="user.email" required
+						type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+				</div>
+				<div class="form-group">
+					<label>Password:</label>
+					<input type="password" class="form-control" ng-model="user.password" required
+						minlength="8" maxlength="30">
+				</div>
+				<div class="form-group">
+					<input class="btn btn-lg btn-success" style="color: black" type="submit" value="Submit!">
+				</div>
+			</div>
+			</form>
+	</div>
+</div>

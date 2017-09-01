@@ -5,9 +5,10 @@
         </div>
         <div class="col-md-4">
             <div ng-show="SelectedEvent" class="alert alert-success" style="margin-top:50px">
-                <h2 style="margin-top:0px"> Selected Event:</h2>
+                <h2 style="margin-top:0px">Event Info:</h2>
                 <h3 style="color:#A9A50E">{{SelectedEvent.title}}</h3>
-                <p>{{SelectedEvent.eventDescription}}</p>
+                <h4>Max Capacity: {{SelectedEvent.capacity}}</h4>
+                <p>{{SelectedEvent.description}}</p>
             </div>
         </div>
     </div>

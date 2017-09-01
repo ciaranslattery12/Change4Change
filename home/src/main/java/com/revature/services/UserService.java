@@ -9,6 +9,8 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.revature.beans.Users;
+import com.revature.beans.UsersRole;
+import com.revature.helpers.Password;
 
 @Service
 public class UserService {
@@ -24,6 +26,8 @@ public class UserService {
 	@Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)
 	public void createNewUser(Users user){
 		//logger.debug("Created User: " + user);
+		user.setPassword(Password.hashPassword(user.getPassword()));
+		user.setUserRoleId(new UsersRole(2, "USER"));
 		userDAOManager.create(user);
 	}
 	
