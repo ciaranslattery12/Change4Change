@@ -16,7 +16,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
@@ -33,8 +32,11 @@ public class Events {
 	@Column(name="MAX_CAPACITY")
 	private int maxCapacity;
 	
-	@Column(name="EVENT_DATE")
-	private Timestamp eventDate;
+	@Column(name="EVENT_START_TIME", nullable=false)
+	private Timestamp startTime;
+	
+	@Column(name="EVENT_END_TIME", nullable=false)
+	private Timestamp endTime;
 	
 	@Column(name="EVENT_DESCRIPTION")
 	private String eventDescription;
@@ -62,23 +64,24 @@ public class Events {
 		super();
 	}
 	
-	public Events(int eventId, int maxCapacity, Timestamp eventDate, String eventDescription,
+	public Events(int eventId, int maxCapacity, Timestamp startTime, String eventDescription,
 			EventType eventType, Users user, EventStatus eventStatus) {
 		super();
 		this.eventId = eventId;
 		this.maxCapacity = maxCapacity;
-		this.eventDate = eventDate;
+		this.startTime = startTime;
 		this.eventDescription = eventDescription;
 		this.eventType = eventType;
 		this.user = user;
 		this.eventStatus = eventStatus;
 	}
 
-	public Events(int maxCapacity, Timestamp eventDate, String eventDescription, Set<Users> users,
+	public Events(int maxCapacity, Timestamp startTime, Timestamp endTime, String eventDescription, Set<Users> users,
 			EventType eventType, Users user, EventStatus eventStatus, Set<Photos> photos) {
 		super();
 		this.maxCapacity = maxCapacity;
-		this.eventDate = eventDate;
+		this.startTime = startTime;
+		this.endTime = endTime;
 		this.eventDescription = eventDescription;
 		this.users = users;
 		this.eventType = eventType;
@@ -87,11 +90,12 @@ public class Events {
 		this.photos = photos;
 	}
 	
-	public Events(int maxCapacity, Timestamp eventDate, String eventDescription,
+	public Events(int maxCapacity, Timestamp startTime, Timestamp endTime, String eventDescription,
 			EventType eventType, Users user, EventStatus eventStatus) {
 		super();
 		this.maxCapacity = maxCapacity;
-		this.eventDate = eventDate;
+		this.startTime = startTime;
+		this.endTime = endTime;
 		this.eventDescription = eventDescription;
 		this.eventType = eventType;
 		this.user = user;
@@ -114,12 +118,20 @@ public class Events {
 		this.maxCapacity = maxCapacity;
 	}
 
-	public Timestamp getEventDate() {
-		return eventDate;
+	public Timestamp getStartTime() {
+		return startTime;
 	}
 
-	public void setEventDate(Timestamp eventDate) {
-		this.eventDate = eventDate;
+	public void setStartTime(Timestamp startTime) {
+		this.startTime = startTime;
+	}
+
+	public Timestamp getEndTime() {
+		return endTime;
+	}
+
+	public void setEndTime(Timestamp endTime) {
+		this.endTime = endTime;
 	}
 
 	public String getEventDescription() {
@@ -172,7 +184,7 @@ public class Events {
 
 	@Override
 	public String toString() {
-		return "Events [eventId=" + eventId + ", maxCapacity=" + maxCapacity + ", eventDate=" + eventDate
+		return "Events [eventId=" + eventId + ", maxCapacity=" + maxCapacity + ", eventDate=" + startTime
 				+ ", eventDescription=" + eventDescription + ", eventType=" + eventType
 				+ ", eventStatus=" + eventStatus + "]";
 	}

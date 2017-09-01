@@ -1,4 +1,4 @@
-angular.module("C4C", ["ngRoute"]);
+var app = angular.module("C4C", ["ngRoute", 'ui.calendar']);
 angular.module("C4C")
 	.config(function($locationProvider, $routeProvider) {
 		
@@ -19,5 +19,9 @@ angular.module("C4C")
 		.when("/user", {
 			templateUrl: "pages/users.html",
 			controller: "usersCtrl"
+		})
+		.when("/calendar", {
+			templateUrl: "pages/calendar.html",
+			controller: "calendarCtrl"
 		});
 	});

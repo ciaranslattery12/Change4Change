@@ -33,7 +33,7 @@ public class EventDAOTests extends ChangeForChangeTests {
 		context = new ClassPathXmlApplicationContext("dao-beans.xml");
 	}
 
-	@Ignore
+	
 	@Test
 	public void createTest() throws ParseException {
 
@@ -41,9 +41,9 @@ public class EventDAOTests extends ChangeForChangeTests {
 
 		// set date in the future
 		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-		Date date = dateFormat.parse("01/09/2017");
-		long time = date.getTime();
-
+		Date date = dateFormat.parse("05/09/2017");
+		long startTime = date.getTime();
+		long endTime = date.getTime();
 		eventDAOManager = (EventDAOManager) context.getBean("eventDAO");
 
 		// instantiate custom types
@@ -53,7 +53,7 @@ public class EventDAOTests extends ChangeForChangeTests {
 		Users user = new Users(142, "Patrick", "Muldoon", "patrickM", "password", "patrick@example.com", role);
 
 		// construct event and create
-		Events newEvent = new Events(250, new Timestamp(time), "Diabetes Walk", type, user, status);
+		Events newEvent = new Events(250, new Timestamp(startTime), new Timestamp(endTime), "Diabetes Walk", type, user, status);
 		Long rowCount = jdbcTemplate.queryForObject(EVENT_COUNT, Long.class);
 		eventDAOManager.create(newEvent);
 		Long newRowCount = jdbcTemplate.queryForObject(EVENT_COUNT, Long.class);
@@ -93,7 +93,7 @@ public class EventDAOTests extends ChangeForChangeTests {
 		eventDAOManager = (EventDAOManager) context.getBean("eventDAO");
 		Long rowCount =jdbcTemplate.queryForObject(EVENT_COUNT, Long.class);
 		
-		Events event = eventDAOManager.findById(173);
+		Events event = eventDAOManager.findById(181);
 		
 		eventDAOManager.delete(event);
 		
