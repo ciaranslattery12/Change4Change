@@ -32,7 +32,7 @@ public class Events {
 	@Column(name="MAX_CAPACITY")
 	private int maxCapacity;
 	
-	@Column(name="EVENT_TITLE", nullable=false)
+	@Column(name="EVENT_TITLE")
 	private String eventTitle;
 	
 	@Column(name="EVENT_START_TIME", nullable=false)

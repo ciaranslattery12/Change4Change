@@ -33,15 +33,31 @@ public class LoginController {
 	 * 
 	 * Does not forward, needs fixing
 	 */
-	@RequestMapping(value="/login", method=RequestMethod.POST)
+	@RequestMapping(value="/login", method=RequestMethod.POST, consumes=MediaType.APPLICATION_JSON_VALUE,
+			produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Users> login(@RequestBody Users user, HttpServletRequest req){
-		Users newUser = loginService.authenticate(user.getUserName(), user.getPassword());
-		System.out.println(newUser.toString());
-		if(newUser.getUserName() != null){
-			req.getSession().setAttribute("loggedInUser", newUser);
-			return new ResponseEntity<Users>(newUser, HttpStatus.OK);
+		Users validUser = loginService.authenticate(user, req.getSession());
+		if(validUser.getUserName() != null){
+			return new ResponseEntity<Users>(validUser, HttpStatus.OK);
 		} else {
 			return new ResponseEntity<Users>(HttpStatus.NO_CONTENT);
+		}
+	}
+	
+	@RequestMapping(value="/logout", method=RequestMethod.GET)
+	public ResponseEntity<Void> logout(HttpServletRequest req){
+		HttpSession session = req.getSession();
+		loginService.logout(session);
+		return new ResponseEntity<Void>(HttpStatus.OK);
+	}
+	
+	@RequestMapping(value="/isLoggedIn", method=RequestMethod.GET)
+	public ResponseEntity<Users> isLoggedIn(HttpServletRequest req){
+		HttpSession session = req.getSession();
+		if(loginService.isLoggedIn()){
+			return new ResponseEntity<Users>((Users)session.getAttribute("loggedInUser"), HttpStatus.OK);
+		}else{
+			return new ResponseEntity<Users>(HttpStatus.UNAUTHORIZED);
 		}
 	}
 }

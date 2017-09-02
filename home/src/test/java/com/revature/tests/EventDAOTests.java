@@ -33,7 +33,6 @@ public class EventDAOTests extends ChangeForChangeTests {
 		context = new ClassPathXmlApplicationContext("dao-beans.xml");
 	}
 
-	@Ignore
 	@Test
 	public void createTest() throws ParseException {
 
@@ -47,7 +46,7 @@ public class EventDAOTests extends ChangeForChangeTests {
 		eventDAOManager = (EventDAOManager) context.getBean("eventDAO");
 
 		// instantiate custom types
-		EventType type = new EventType(1, "WALK");
+		EventType type = new EventType(2, "FUNDRAISER");
 		EventStatus status = new EventStatus(1, "UPCOMING");
 		UsersRole role = new UsersRole(1, "ADMIN");
 		Users user = new Users(142, "Patrick", "Muldoon", "patrickM", "password", "patrick@example.com", role);
