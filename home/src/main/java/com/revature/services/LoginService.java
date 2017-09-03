@@ -1,5 +1,7 @@
 package com.revature.services;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.jsoup.Jsoup;
@@ -14,21 +16,27 @@ public class LoginService {
 	
 private UserDAOManager userDAOManager;
 	
-	private boolean authenticated = false;
-
+	private boolean isLoggedIn = false;
+	private HttpSession session;
+	
 	@Autowired
 	public void setUserDAOManager(UserDAOManager userDAOManager) {
 		this.userDAOManager = userDAOManager;
 	}
 	
-	public Users authenticate(String username, String password){
-		if (username != null) {
-			String cleanUsername = Jsoup.clean(username, Whitelist.basic());
-			String cleanPassword = Jsoup.clean(password, Whitelist.basic());
+
+	public Users authenticate(Users user, HttpSession session){
+		if (user.getUserName() != null) {
+			String cleanUsername = Jsoup.clean(user.getUserName(), Whitelist.basic());
+			String cleanPassword = Jsoup.clean(user.getPassword(), Whitelist.basic());
 			if (cleanUsername.equals(userDAOManager.findByUserName(cleanUsername).getUserName())) {
-				Users user = userDAOManager.findByUserName(cleanUsername);
-				if (Password.checkPassword(cleanPassword, user.getPassword())) {
-					return new Users(user.getUsersId(), user.getFirstName(), user.getLastName(), user.getUserName(), null, user.getEmail(), new UsersRole(user.getUserRoleId().getUserRoleId()));
+				Users validUser = userDAOManager.findByUserName(cleanUsername);
+				if (Password.checkPassword(cleanPassword, validUser.getPassword())) {
+					session.setAttribute("loggedInUser", validUser);
+					this.session = session;
+					isLoggedIn = true;
+					validUser.setPassword(null);
+					return validUser;
 				}
 			}
 		} else {
@@ -36,4 +44,27 @@ private UserDAOManager userDAOManager;
 		}
 		return new Users();
 	}
+	
+	public void logout(HttpSession session){
+		session.invalidate();
+		isLoggedIn = false;
+	}
+
+	public boolean isLoggedIn() {
+		return isLoggedIn;
+	}
+
+	public void setLoggedIn(boolean isLoggedIn) {
+		this.isLoggedIn = isLoggedIn;
+	}
+
+	public HttpSession getSession() {
+		return session;
+	}
+
+	public void setSession(HttpSession session) {
+		this.session = session;
+	}
+	
+	
 }

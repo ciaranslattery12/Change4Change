@@ -33,11 +33,13 @@ public class LoginController {
 	public void setLoginService(LoginService loginService) {
 		this.loginService = loginService;
 	}
+	
 	/**
 	 * 
 	 * Does not forward, needs fixing
 	 * @throws IOException 
 	 */
+	/*
 	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public ResponseEntity<Users> login(@RequestBody Users user, HttpServletRequest req, HttpServletResponse resp) throws IOException{
 
@@ -51,6 +53,7 @@ public class LoginController {
 		 			throw new Exception( "Improper password format." );
 		 		}*/
 		 		//do what you want here, after its been validated
+	/*
 		 		Users newUser = loginService.authenticate(user.getUserName(), user.getPassword());
 				System.out.println(newUser.toString());
 				if(newUser.getUserName() != null){
@@ -63,5 +66,32 @@ public class LoginController {
 		 		resp.sendError( HttpServletResponse.SC_BAD_REQUEST, e.getMessage());
 		 	}
 		 	return new ResponseEntity<Users>(HttpStatus.NO_CONTENT);*/
+	//}
+	@RequestMapping(value="/login", method=RequestMethod.POST, consumes=MediaType.APPLICATION_JSON_VALUE,
+			produces=MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Users> login(@RequestBody Users user, HttpServletRequest req){
+		Users validUser = loginService.authenticate(user, req.getSession());
+		if(validUser.getUserName() != null){
+			return new ResponseEntity<Users>(validUser, HttpStatus.OK);
+		} else {
+			return new ResponseEntity<Users>(HttpStatus.NO_CONTENT);
+		}
+	}
+	
+	@RequestMapping(value="/logout", method=RequestMethod.GET)
+	public ResponseEntity<Void> logout(HttpServletRequest req){
+		HttpSession session = req.getSession();
+		loginService.logout(session);
+		return new ResponseEntity<Void>(HttpStatus.OK);
+	}
+	
+	@RequestMapping(value="/isLoggedIn", method=RequestMethod.GET)
+	public ResponseEntity<Users> isLoggedIn(HttpServletRequest req){
+		HttpSession session = req.getSession();
+		if(loginService.isLoggedIn()){
+			return new ResponseEntity<Users>((Users)session.getAttribute("loggedInUser"), HttpStatus.OK);
+		}else{
+			return new ResponseEntity<Users>(HttpStatus.UNAUTHORIZED);
+		}
 	}
 }

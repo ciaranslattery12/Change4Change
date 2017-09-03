@@ -116,7 +116,7 @@ public class UsersController {
 	 * 
 	 */
 	
-	@RequestMapping(value="admin/users/deleteUser", method=RequestMethod.DELETE,
+	@RequestMapping(value="/users", method=RequestMethod.DELETE,
 			consumes=MediaType.APPLICATION_JSON_VALUE)
 	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED, rollbackFor=Exception.class)
 	public ResponseEntity<Void> deleteUser(@PathVariable int userId){

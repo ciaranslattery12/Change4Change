@@ -7,7 +7,7 @@ angular.module("C4C")
 					data : $scope.user
 				}).then(function(response) {
 					console.log(response);
-					if(response.data.userName != null){
+					if(response.status === 200){
 						console.log(response);
 						$location.path("/home");
 					} else {

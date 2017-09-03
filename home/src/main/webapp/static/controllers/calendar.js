@@ -43,6 +43,7 @@ app.controller('calendarCtrl', ['$scope', '$http', 'uiCalendarConfig', function 
                 start: new Date(parseInt(value.startTime)),
                 end: new Date(parseInt(value.endTime)),
                 capacity: value.maxCapacity,
+                id: value.eventId,
 //                allDay : value.IsFullDay,
                 stick: true
             });
