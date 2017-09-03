@@ -30,9 +30,8 @@ private UserDAOManager userDAOManager;
 					session.setAttribute("loggedInUser", validUser);
 					this.session = session;
 					isLoggedIn = true;
-					return new Users(validUser.getUsersId(), validUser.getFirstName(), validUser.getLastName(),
-							validUser.getUserName(), null, validUser.getEmail(), 
-							validUser.getUserRoleId());
+					validUser.setPassword(null);
+					return validUser;
 				}
 			}
 		} else {

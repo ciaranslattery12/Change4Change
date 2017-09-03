@@ -9,6 +9,10 @@
                 <h3 style="color:#A9A50E">{{SelectedEvent.title}}</h3>
                 <h4>Max Capacity: {{SelectedEvent.capacity}}</h4>
                 <p>{{SelectedEvent.description}}</p>
+                <div ng-Controller="registerCtrl">
+                	<button class="btn btn-success" ng-click="register(SelectedEvent.id)">
+                	Register</button>
+                </div>
             </div>
         </div>
     </div>

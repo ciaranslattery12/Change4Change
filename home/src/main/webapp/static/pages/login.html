@@ -5,10 +5,10 @@
 	<p>Enter username and password below<p>
 	<form role="form" ng-submit="loginUser()">
 		<div class="form-group">
-			Username: <input type="text" name="username" ng-model="user.userName" /><br />
+			Username: <input type="text" name="username" ng-model="user.userName" required /><br />
 		</div>
 		<div class="form-group">
-			Password: <input type="password" name="password" ng-model="user.password" /><br />
+			Password: <input type="password" name="password" ng-model="user.password"  required/><br />
 		</div>
 		<input class="btn btn-primary" type="submit" value="Login" /><br />
 	</form>
