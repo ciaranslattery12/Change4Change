@@ -1,5 +1,8 @@
 package com.revature.controllers;
 
+import java.io.IOException;
+import java.util.regex.Pattern;
+
 import javax.servlet.http.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +25,8 @@ import com.revature.services.LoginService;
 @Controller
 @RequestMapping("/")
 public class LoginController {
-
+	private static final Pattern whiteListPattern = Pattern.compile("[a-zA-Z]");
+	
 	@Autowired
 	private LoginService loginService;
 
@@ -32,16 +36,32 @@ public class LoginController {
 	/**
 	 * 
 	 * Does not forward, needs fixing
+	 * @throws IOException 
 	 */
 	@RequestMapping(value="/login", method=RequestMethod.POST)
-	public ResponseEntity<Users> login(@RequestBody Users user, HttpServletRequest req){
-		Users newUser = loginService.authenticate(user.getUserName(), user.getPassword());
-		System.out.println(newUser.toString());
-		if(newUser.getUserName() != null){
-			req.getSession().setAttribute("loggedInUser", newUser);
-			return new ResponseEntity<Users>(newUser, HttpStatus.OK);
-		} else {
-			return new ResponseEntity<Users>(HttpStatus.NO_CONTENT);
-		}
+	public ResponseEntity<Users> login(@RequestBody Users user, HttpServletRequest req, HttpServletResponse resp) throws IOException{
+
+		 	/*try {
+		 		String username = req.getParameter("username");
+		 		String password = req.getParameter("password");
+		 		if (!whiteListPattern.matcher(username).matches()) {
+		 			throw new Exception( "Improper username format." );
+		 		}
+		 		if (!whiteListPattern.matcher(password).matches()) {
+		 			throw new Exception( "Improper password format." );
+		 		}*/
+		 		//do what you want here, after its been validated
+		 		Users newUser = loginService.authenticate(user.getUserName(), user.getPassword());
+				System.out.println(newUser.toString());
+				if(newUser.getUserName() != null){
+					req.getSession().setAttribute("loggedInUser", newUser);
+					return new ResponseEntity<Users>(newUser, HttpStatus.OK);
+				} else {
+					return new ResponseEntity<Users>(HttpStatus.NOT_ACCEPTABLE);
+				}
+		 /*	} catch(Exception e ) {
+		 		resp.sendError( HttpServletResponse.SC_BAD_REQUEST, e.getMessage());
+		 	}
+		 	return new ResponseEntity<Users>(HttpStatus.NO_CONTENT);*/
 	}
 }

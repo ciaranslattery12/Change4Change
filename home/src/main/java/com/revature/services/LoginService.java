@@ -2,6 +2,8 @@ package com.revature.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.jsoup.Jsoup;
+import org.jsoup.safety.Whitelist;
 
 import com.revature.beans.Users;
 import com.revature.beans.UsersRole;
@@ -21,9 +23,11 @@ private UserDAOManager userDAOManager;
 	
 	public Users authenticate(String username, String password){
 		if (username != null) {
-			if (username.equals(userDAOManager.findByUserName(username).getUserName())) {
-				Users user = userDAOManager.findByUserName(username);
-				if (Password.checkPassword(password, user.getPassword())) {
+			String cleanUsername = Jsoup.clean(username, Whitelist.basic());
+			String cleanPassword = Jsoup.clean(password, Whitelist.basic());
+			if (cleanUsername.equals(userDAOManager.findByUserName(cleanUsername).getUserName())) {
+				Users user = userDAOManager.findByUserName(cleanUsername);
+				if (Password.checkPassword(cleanPassword, user.getPassword())) {
 					return new Users(user.getUsersId(), user.getFirstName(), user.getLastName(), user.getUserName(), null, user.getEmail(), new UsersRole(user.getUserRoleId().getUserRoleId()));
 				}
 			}

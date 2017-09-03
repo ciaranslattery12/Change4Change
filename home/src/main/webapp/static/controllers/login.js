@@ -1,5 +1,5 @@
-angular.module("C4C").controller("loginCtrl",
-		function($scope, $http, $location) {
+angular.module("C4C")
+	.controller("loginCtrl", function($scope, $http, $location) {
 			$scope.loginUser = function() {
 				$http({
 					method : "POST",
