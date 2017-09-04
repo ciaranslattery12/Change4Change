@@ -7,7 +7,8 @@
             <div ng-show="SelectedEvent" class="alert alert-success" style="margin-top:50px">
                 <h2 style="margin-top:0px">Event Info:</h2>
                 <h3 style="color:#A9A50E">{{SelectedEvent.title}}</h3>
-                <h4>Max Capacity: {{SelectedEvent.capacity}}</h4>
+                <h4>Start Time: {{SelectedEvent.startTime | date : "short"}}</h4>
+                <h4>End Time: {{SelectedEvent.endTime | date: "short"}}</h4>
                 <p>{{SelectedEvent.description}}</p>
                 <div ng-Controller="registerCtrl">
                 	<button class="btn btn-success" ng-click="register(SelectedEvent.id)">

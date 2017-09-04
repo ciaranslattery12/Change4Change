@@ -114,7 +114,7 @@ public class UsersController {
 	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED, rollbackFor=Exception.class)
 	public ResponseEntity<Void> updateUser(@Valid @RequestBody Users user){
 		//logger.info("Updating User: " + user);
-		System.out.println("inside the update, made it to the controller");
+		
 		userService.updateUser(user);
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}

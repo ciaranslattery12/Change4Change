@@ -29,10 +29,12 @@ app.controller('calendarCtrl', ['$scope', '$http', 'uiCalendarConfig', function 
         $scope.events.slice(0, $scope.events.length);
         angular.forEach(data.data, function (value) {
             $scope.events.push({
-                title: value.eventDescription,
-                description: value.eventType.eventTypeDescription,
+                title: value.eventTitle,
+                description: value.eventDescription,
                 start: new Date(parseInt(value.startTime)),
                 end: new Date(parseInt(value.endTime)),
+                startTime: value.startTime,
+                endTime: value.endTime,
                 capacity: value.maxCapacity,
                 id: value.eventId,
 //                allDay : value.IsFullDay,
