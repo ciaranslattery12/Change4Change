@@ -1,12 +1,10 @@
 package com.revature.beans;
 
-import java.sql.Blob;
 import java.util.Arrays;
 
 import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name="PHOTOS")

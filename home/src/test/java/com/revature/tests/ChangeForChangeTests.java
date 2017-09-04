@@ -2,7 +2,6 @@ package com.revature.tests;
 
 import static org.junit.Assert.*;
 
-import javax.naming.Context;
 
 import org.junit.BeforeClass;
 import org.junit.Test;

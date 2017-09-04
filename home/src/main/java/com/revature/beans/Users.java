@@ -4,11 +4,6 @@ import java.util.Set;
 
 import javax.persistence.*;
 
-import org.hibernate.annotations.LazyCollection;
-import org.hibernate.annotations.LazyCollectionOption;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 //import org.hibernate.annotations.Cascade;
 //import org.hibernate.annotations.CascadeType;
 
