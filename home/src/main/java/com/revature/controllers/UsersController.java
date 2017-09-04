@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.revature.beans.Events;
 import com.revature.beans.Users;
 import com.revature.services.InputValidationService;
 import com.revature.services.UserService;
@@ -108,14 +109,16 @@ public class UsersController {
 	 * 
 	 */
 	
+	//change request to take in an event instead
 	@RequestMapping(value="/users", method=RequestMethod.PUT,
 			consumes=MediaType.APPLICATION_JSON_VALUE,
 			produces=MediaType.APPLICATION_JSON_VALUE)
 	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED, rollbackFor=Exception.class)
 	public ResponseEntity<Void> updateUser(@Valid @RequestBody Users user){
 		//logger.info("Updating User: " + user);
-		
-		userService.updateUser(user);
+		Users updatedUser = userService.findUserById(user.getUsersId());
+		updatedUser.setEvents(user.getEvents());
+		userService.updateUser(updatedUser);
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 	

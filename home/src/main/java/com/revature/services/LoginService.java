@@ -32,9 +32,11 @@ private UserDAOManager userDAOManager;
 				Users validUser = userDAOManager.findByUserName(cleanUsername);
 				if (Password.checkPassword(cleanPassword, validUser.getPassword())) {
 					isLoggedIn = true;
-					session.setAttribute("loggedInUser", validUser);
+					Users sessionUser = new Users(validUser.getUsersId(), validUser.getFirstName(),
+							validUser.getLastName(), validUser.getEvents(), validUser.getOwnedEvents());
+					session.setAttribute("loggedInUser", sessionUser);
 					this.session = session;
-					return validUser;
+					return sessionUser;
 				}
 			}
 		} else {

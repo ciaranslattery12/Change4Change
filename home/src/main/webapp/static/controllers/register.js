@@ -1,4 +1,4 @@
-app.controller("registerCtrl", function($scope, $location, $http){
+app.controller("registerCtrl", function($scope, $location, $http, $window){
 $scope.register = function(id){
 		$scope.id = id;
 		console.log(id);
@@ -10,14 +10,15 @@ $scope.register = function(id){
     			$http({
     				method: "GET", url: "events/find/" + $scope.id, data: angular.toJson($scope.id)
     			}).then(function(response, user){
+    				console.log($scope.user);
     			$scope.user.events.push(response.data)
     			window.alert("Event pushed into User");
-    			var info = $scope.user;
+    			console.log($scope.user);
     			$http({
-    				method: "PUT", url: "users", data: info
+    				method: "PUT", url: "users", data: $scope.user
     			}).then(function(response){
-    				console.log(response);
-    				$location.path("/calendar");
+    				if(response.status === 200)
+    				$window.location.reload();
     			});
     		});
     		}else{
