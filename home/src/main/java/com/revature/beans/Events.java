@@ -1,6 +1,6 @@
 package com.revature.beans;
 
-import java.sql.Timestamp;
+import java.util.Date;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -36,10 +36,10 @@ public class Events {
 	private String eventTitle;
 	
 	@Column(name="EVENT_START_TIME", nullable=false)
-	private Timestamp startTime;
+	private Date startTime;
 	
 	@Column(name="EVENT_END_TIME", nullable=false)
-	private Timestamp endTime;
+	private Date endTime;
 	
 	@Column(name="EVENT_DESCRIPTION")
 	private String eventDescription;
@@ -67,7 +67,7 @@ public class Events {
 		super();
 	}
 	
-	public Events(int eventId, int maxCapacity, Timestamp startTime, String eventDescription,
+	public Events(int eventId, int maxCapacity, Date startTime, String eventDescription,
 			EventType eventType, Users user, EventStatus eventStatus) {
 		super();
 		this.eventId = eventId;
@@ -79,7 +79,7 @@ public class Events {
 		this.eventStatus = eventStatus;
 	}
 
-	public Events(int maxCapacity, Timestamp startTime, Timestamp endTime, String eventDescription, Set<Users> users,
+	public Events(int maxCapacity, Date startTime, Date endTime, String eventDescription, Set<Users> users,
 			EventType eventType, Users user, EventStatus eventStatus, Set<Photos> photos) {
 		super();
 		this.maxCapacity = maxCapacity;
@@ -93,7 +93,7 @@ public class Events {
 		this.photos = photos;
 	}
 	
-	public Events(int maxCapacity, Timestamp startTime, Timestamp endTime, String eventDescription,
+	public Events(int maxCapacity, Date startTime, Date endTime, String eventDescription,
 			EventType eventType, Users user, EventStatus eventStatus, String eventTitle) {
 		super();
 		this.maxCapacity = maxCapacity;
@@ -122,19 +122,19 @@ public class Events {
 		this.maxCapacity = maxCapacity;
 	}
 
-	public Timestamp getStartTime() {
+	public Date getStartTime() {
 		return startTime;
 	}
 
-	public void setStartTime(Timestamp startTime) {
+	public void setStartTime(Date startTime) {
 		this.startTime = startTime;
 	}
 
-	public Timestamp getEndTime() {
+	public Date getEndTime() {
 		return endTime;
 	}
 
-	public void setEndTime(Timestamp endTime) {
+	public void setEndTime(Date endTime) {
 		this.endTime = endTime;
 	}
 
@@ -194,6 +194,7 @@ public class Events {
 		this.eventTitle = eventTitle;
 	}
 
+	
 	@Override
 	public String toString() {
 		return "Events [eventId=" + eventId + ", maxCapacity=" + maxCapacity + ", eventDate=" + startTime

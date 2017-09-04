@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.revature.beans.Users;
+import com.revature.services.InputValidationService;
 import com.revature.services.UserService;
 
 @Controller
@@ -26,6 +27,9 @@ public class UsersController {
 	//private static final Logger logger = Logger.getLogger(UsersController.class);
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private InputValidationService inputValidationService;
 	
 	public void setUserService(UserService userService){
 		this.userService = userService;
@@ -43,8 +47,13 @@ public class UsersController {
 	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED, rollbackFor=Exception.class)
 	public ResponseEntity<Users> createUser(@Valid @RequestBody Users user){
 		//logger.info("Creating New User: " + user);
-		userService.createNewUser(user);
-		return new ResponseEntity<Users>(user, HttpStatus.CREATED);
+		Users validUser = inputValidationService.validateInput(user);
+		if(inputValidationService.isSignupInputValidated()){
+		userService.createNewUser(validUser);
+		return new ResponseEntity<Users>(validUser, HttpStatus.CREATED);
+		}else{
+		return new ResponseEntity<Users>(validUser, HttpStatus.BAD_REQUEST);
+		}
 	}
 	
 	/**

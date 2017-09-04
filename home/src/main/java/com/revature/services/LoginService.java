@@ -8,7 +8,6 @@ import org.jsoup.Jsoup;
 import org.jsoup.safety.Whitelist;
 
 import com.revature.beans.Users;
-import com.revature.beans.UsersRole;
 import com.revature.helpers.Password;
 
 @Service

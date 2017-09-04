@@ -2,6 +2,8 @@ package com.revature.controllers;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.*;
@@ -21,16 +23,30 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.revature.beans.Events;
 import com.revature.beans.Users;
 import com.revature.services.EventService;
+import com.revature.services.InputValidationService;
+import com.revature.services.LoginService;
 
 @Controller
 public class EventsController {
 
 	//private static final Logger logger = Logger.getLogger(UsersController.class);
 	private EventService eventService;
+	private InputValidationService inputValidationService;
+	private LoginService loginService;
 	
 	@Autowired
 	public void setEventService(EventService eventService) {
 		this.eventService = eventService;
+	}
+	
+	@Autowired
+	public void setInputValidationService(InputValidationService inputValidationService){
+		this.inputValidationService = inputValidationService;
+	}
+	
+	@Autowired
+	public void setLoginService(LoginService loginService){
+		this.loginService = loginService;
 	}
 	
 	@RequestMapping(value="/events/create", method=RequestMethod.POST,
@@ -39,8 +55,22 @@ public class EventsController {
 	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED, rollbackFor=Exception.class)
 	public ResponseEntity<Events> create(@Valid @RequestBody Events event){
 		//logger.info("Creating New Event: " + event);
-		eventService.createEvent(event);
-		return new ResponseEntity<Events>(event, HttpStatus.CREATED);
+		HttpSession session = loginService.getSession();
+		Users user = (Users) session.getAttribute("loggedInUser");
+		System.out.println(user.getUserRoleId().getUserRoleId());
+		event.setUser(user);
+		Events validEvent = inputValidationService.validateInput(event);
+		if(user.getUserRoleId().getUserRoleId() == 1){
+			if(inputValidationService.isEventInputValidated()){
+			inputValidationService.setEventInputValidated(false);
+			eventService.createEvent(validEvent);
+			return new ResponseEntity<Events>(validEvent, HttpStatus.CREATED);
+			}else{
+				return new ResponseEntity<Events>(validEvent, HttpStatus.BAD_REQUEST);
+			}
+		}else{
+			return new ResponseEntity<Events>(validEvent, HttpStatus.UNAUTHORIZED);
+		}
 	}
 	
 	@RequestMapping(value="/events/find/{eventId}", method=RequestMethod.GET,

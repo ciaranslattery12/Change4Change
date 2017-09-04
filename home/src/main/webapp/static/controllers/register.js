@@ -18,9 +18,8 @@ $scope.register = function(id){
     			window.alert("Event pushed into User");
     			console.log($scope.user);
     			console.log(response);
-    			data = $scope.user
     			$http({
-    				method: "PUT", url: "users", data
+    				method: "PUT", url: "users", data: angular.toJson($scope.user)
     			}).then(function(response){
     				console.log(response);
     				$location.path("/calendar");

@@ -7,11 +7,14 @@ angular.module("C4C")
 			console.log(response.status);
 			if(response.status == 201){
 				window.alert("User created");
-				$location.path("pages/login.html");
+				$location.path("/login");
+			}else if(response.status == 400){
+				window.alert("Invalid signup form input");
+				$location.path("/signup");
 			}
 			else
 				window.alert("Failed to create User");
-				$location.path("pages/signup.html");
+				$location.path("/signup");
 		});
 		}
 	});
