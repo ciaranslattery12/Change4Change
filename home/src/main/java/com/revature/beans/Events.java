@@ -45,6 +45,7 @@ public class Events {
 	private String eventDescription;
 	
 	@ManyToMany(mappedBy="events", cascade=CascadeType.PERSIST, fetch=FetchType.EAGER)
+	@JsonIgnore
 	private Set<Users> users;
 	
 	@ManyToOne(cascade=CascadeType.PERSIST, fetch=FetchType.EAGER)

@@ -71,7 +71,7 @@ public class LoginController {
 			produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Users> login(@RequestBody Users user, HttpServletRequest req){
 		Users validUser = loginService.authenticate(user, req.getSession());
-		if(validUser.getUserName() != null){
+		if(loginService.isLoggedIn()){
 			return new ResponseEntity<Users>(validUser, HttpStatus.OK);
 		} else {
 			return new ResponseEntity<Users>(HttpStatus.NO_CONTENT);
@@ -91,7 +91,7 @@ public class LoginController {
 		if(loginService.isLoggedIn()){
 			return new ResponseEntity<Users>((Users)session.getAttribute("loggedInUser"), HttpStatus.OK);
 		}else{
-			return new ResponseEntity<Users>(HttpStatus.UNAUTHORIZED);
+			return new ResponseEntity<Users>(new Users(), HttpStatus.UNAUTHORIZED);
 		}
 	}
 }

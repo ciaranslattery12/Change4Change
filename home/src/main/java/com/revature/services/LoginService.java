@@ -31,10 +31,9 @@ private UserDAOManager userDAOManager;
 			if (cleanUsername.equals(userDAOManager.findByUserName(cleanUsername).getUserName())) {
 				Users validUser = userDAOManager.findByUserName(cleanUsername);
 				if (Password.checkPassword(cleanPassword, validUser.getPassword())) {
+					isLoggedIn = true;
 					session.setAttribute("loggedInUser", validUser);
 					this.session = session;
-					isLoggedIn = true;
-					validUser.setPassword(null);
 					return validUser;
 				}
 			}

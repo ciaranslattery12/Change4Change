@@ -4,22 +4,17 @@ $scope.register = function(id){
 		console.log(id);
     	$http({
     		method: "GET", url: "isLoggedIn"
-    	}).then(function(response, id){
-    		if(response.data.userName != null){
+    	}).then(function successCallback(response, id){
+    		if(response.status == 200){
     			$scope.user = response.data;
-    			console.log($scope.user);
-    			console.log($scope.id);
     			$http({
     				method: "GET", url: "events/find/" + $scope.id, data: angular.toJson($scope.id)
     			}).then(function(response, user){
-    			console.log(response);
-    			console.log($scope.user);
-    			$scope.user.events.push(response);
+    			$scope.user.events.push(response.data)
     			window.alert("Event pushed into User");
-    			console.log($scope.user);
-    			console.log(response);
+    			var info = $scope.user;
     			$http({
-    				method: "PUT", url: "users", data: angular.toJson($scope.user)
+    				method: "PUT", url: "users", data: info
     			}).then(function(response){
     				console.log(response);
     				$location.path("/calendar");
@@ -27,6 +22,12 @@ $scope.register = function(id){
     		});
     		}else{
     			window.alert("Must be logged in to register for an event");
+    			$location.path("/login");
+    		}
+    	}, function error(response){
+    		var status = response.status;
+    		if(status == 401){
+    			window.alert("You must be logged in to register for an event");
     			$location.path("/login");
     		}
     	});

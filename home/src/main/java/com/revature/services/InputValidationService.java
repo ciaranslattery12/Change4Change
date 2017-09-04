@@ -1,7 +1,7 @@
 package com.revature.services;
 
-import java.sql.Date;
 import java.sql.Timestamp;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 import org.jsoup.Jsoup;
@@ -20,10 +20,11 @@ public class InputValidationService {
 	private static String userNameAndPasswordRegex = "[a-zA-Z0-9_.!?]{4,20}";
 	private static String nameRegex = "[a-zA-Z0-9']{1,25}";
 	private static String emailRegex = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
-	private static String eventTitleRegex = "[a-zA-Z0-9'_]{4,50}";
+	private static String eventTitleRegex = "[a-zA-Z0-9'_ ]{4,50}";
 	private static String eventCapacityRegex = "^(?:[1-9][0-9]{3}|[1-9][0-9]{2}|[1-9][0-9]|[1-9])$";
-	private static String eventDateRegex = "\\d{1,2}/\\d{1,2}/\\d{4}";
-	private static String eventDescriptionRegex = "[a-zA-Z0-9_.']{8,250}";
+	private static String eventDateRegex = "^([0]\\d|[1][0-2])\\/([0-2]\\d|[3][0-1])\\/([2][01]|[1][6-9])"
+			+ "\\d{2}(\\s([0]\\d|[1][0-2])(\\:[0-5]\\d){1,2})*\\s*([aApP][mM]{0,2})?$";
+	private static String eventDescriptionRegex = "[a-zA-Z0-9_.' ]{8,250}";
 	
 	public Users validateInput(Users user){
 		String cleanUsername = Jsoup.clean(user.getUserName(), Whitelist.basic());
@@ -52,13 +53,14 @@ public class InputValidationService {
 	}
 	
 	public Events validateInput(Events event){
-		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy hh:mm a");
+		SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy hh:mm a");
 		Integer capacity = event.getMaxCapacity();
 		String cleanEventTitle = Jsoup.clean(event.getEventTitle(), Whitelist.basic());
 		String cleanEventDescription = Jsoup.clean(event.getEventDescription(), Whitelist.basic());
 		String cleanMaxCapacity = Jsoup.clean(capacity.toString(), Whitelist.basic());
 		String cleanStartTime = Jsoup.clean(dateFormat.format(event.getStartTime()), Whitelist.basic());
 		String cleanEndTime = Jsoup.clean(dateFormat.format(event.getEndTime()), Whitelist.basic());
+		System.out.println(cleanStartTime);
 		if(cleanEventTitle.length() < 4 || cleanEventTitle.length() > 50 || 
 				!cleanEventTitle.matches(eventTitleRegex)){
 			return new Events();
@@ -73,10 +75,17 @@ public class InputValidationService {
 			return new Events();
 		}else{
 			eventInputValidated = true;
-			return new Events(Integer.parseInt(cleanMaxCapacity), Date.valueOf(cleanStartTime), 
-					Date.valueOf(cleanEndTime), cleanEventDescription, event.getEventType(),
-					event.getUser(), new EventStatus(1, "UPCOMING"), cleanEventTitle);
+			try {
+				return new Events(Integer.parseInt(cleanMaxCapacity), dateFormat.parse(cleanStartTime), 
+						dateFormat.parse(cleanEndTime), cleanEventDescription, event.getEventType(),
+						event.getUser(), new EventStatus(1, "UPCOMING"), cleanEventTitle);
+			} catch (NumberFormatException e) {
+				e.printStackTrace();
+			} catch (ParseException e) {
+				e.printStackTrace();
+			}
 		}
+		return new Events();
 
 	}
 
