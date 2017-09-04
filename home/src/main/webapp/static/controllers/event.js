@@ -14,6 +14,10 @@ angular.module("C4C")
 					window.alert("you do not have those privaleges");
 					$window.location.reload();
 				}
+				if(reponse.status == 400){
+					window.alert("invalid form input, try again");
+					$window.location.reload();
+				}
 			});
 		}
 	});

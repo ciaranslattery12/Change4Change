@@ -1,5 +1,5 @@
 angular.module("C4C")
-	.controller("loginCtrl", function($scope, $http, $location) {
+	.controller("loginCtrl", function($scope, $http, $location, $window) {
 			$scope.loginUser = function() {
 				$http({
 					method : "POST",
@@ -10,8 +10,10 @@ angular.module("C4C")
 					if(response.status === 200){
 						console.log(response);
 						$location.path("/home");
-					} else {
-						$location.path("/login");
+					}
+					if(response.status === 204) {
+						window.alert("invalid login credentials, try again!");
+						$window.location.reload();
 					}
 				});
 			}
