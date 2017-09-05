@@ -10,15 +10,16 @@ $scope.register = function(id){
     			$http({
     				method: "GET", url: "events/find/" + $scope.id, data: angular.toJson($scope.id)
     			}).then(function(response, user){
-    				console.log($scope.user);
+    				console.log($scope.user.events);
     			$scope.user.events.push(response.data)
     			window.alert("Event pushed into User");
     			console.log($scope.user);
     			$http({
     				method: "PUT", url: "users", data: $scope.user
     			}).then(function(response){
-    				if(response.status === 200)
-    				$window.location.reload();
+    				if(response.status === 200){
+    				
+    				}
     			});
     		});
     		}else{

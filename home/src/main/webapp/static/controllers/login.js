@@ -1,5 +1,6 @@
 angular.module("C4C")
-	.controller("loginCtrl", function($scope, $http, $location, $window) {
+	.controller("loginCtrl", function($scope, $http, $location, $window, $rootScope) {
+		$rootScope.loggedIn = false;
 			$scope.loginUser = function() {
 				$http({
 					method : "POST",
@@ -8,6 +9,8 @@ angular.module("C4C")
 				}).then(function(response) {
 					console.log(response);
 					if(response.status === 200){
+						$rootScope.loggedInUser = response;
+						$rootScope.loggedIn = true;
 						console.log(response);
 						$location.path("/home");
 					}

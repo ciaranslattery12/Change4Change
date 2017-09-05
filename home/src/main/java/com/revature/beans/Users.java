@@ -77,13 +77,14 @@ public class Users {
 		this.userRole = userRoleId;
 	}
 
-	public Users(int usersId, String firstName, String lastName, Set<Events> events, Set<Events> ownedEvents) {
+	public Users(int usersId, String firstName, String lastName, Set<Events> events, Set<Events> ownedEvents, UsersRole userRole) {
 		super();
 		this.usersId = usersId;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.events = events;
 		this.ownedEvents = ownedEvents;
+		this.userRole = userRole;
 	}
 
 

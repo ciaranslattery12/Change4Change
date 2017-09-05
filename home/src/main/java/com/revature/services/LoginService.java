@@ -35,7 +35,7 @@ private UserDAOManager userDAOManager;
 				if (Password.checkPassword(cleanPassword, validUser.getPassword())) {
 					isLoggedIn = true;
 					Users sessionUser = new Users(validUser.getUsersId(), validUser.getFirstName(),
-							validUser.getLastName(), validUser.getEvents(), validUser.getOwnedEvents());
+							validUser.getLastName(), validUser.getEvents(), validUser.getOwnedEvents(), validUser.getUserRoleId());
 					session.setAttribute("loggedInUser", sessionUser);
 					this.session = session;
 					return sessionUser;

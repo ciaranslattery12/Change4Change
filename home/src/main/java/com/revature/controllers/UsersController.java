@@ -2,6 +2,7 @@ package com.revature.controllers;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.revature.beans.Users;
 import com.revature.services.InputValidationService;
+import com.revature.services.LoginService;
 import com.revature.services.UserService;
 
 @Controller
@@ -31,10 +33,22 @@ public class UsersController {
 	@Autowired
 	private InputValidationService inputValidationService;
 	
+	@Autowired
+	private LoginService loginService;
+	
 	public void setUserService(UserService userService){
 		this.userService = userService;
 	}
 	
+	public void setInputValidationService(InputValidationService inputValidationService) {
+		this.inputValidationService = inputValidationService;
+	}
+
+	public void setLoginService(LoginService loginService) {
+		this.loginService = loginService;
+	}
+
+
 	/**
 	 * 
 	 * Create User function
@@ -118,6 +132,10 @@ public class UsersController {
 		Users updatedUser = userService.findUserById(user.getUsersId());
 		updatedUser.setEvents(user.getEvents());
 		userService.updateUser(updatedUser);
+		HttpSession session = loginService.getSession();
+		Users sessionUser = new Users(updatedUser.getUsersId(), updatedUser.getFirstName(), updatedUser.getLastName(),
+				updatedUser.getEvents(), updatedUser.getOwnedEvents(), updatedUser.getUserRoleId());
+		session.setAttribute("loggedInUser", sessionUser);
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 	

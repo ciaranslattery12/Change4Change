@@ -36,6 +36,7 @@
 <script type="text/javascript" src="controllers/login.js"></script>
 <script type="text/javascript" src="controllers/home.js"></script>
 <script type="text/javascript" src="controllers/register.js"></script>
+<script type="text/javascript" src="controllers/gatekeeper.js"></script>
 
 <link rel="stylesheet" type="text/css"
 	href="css/fullcalendar.css" />
@@ -53,16 +54,18 @@
 					<a href="#" class="navbar-brand" style="font-size: 3em;">C4C<span
 						class="inverse" style="color: #35d64a;">$</span></a>
 				</div>
-				<div class="collapse navbar-collapse"
+				<div ng-Controller="gatekeeperCtrl" class="collapse navbar-collapse"
 					id="bs-example-navbar-collapse-9">
 					<ul class="nav navbar-nav">
 						<li><a href="#home">Home</a></li>
-						<li><a href="#event">Events</a></li>
-						<li><a href="#gallery">Gallery</a></li>
-						<li><a href="#user">Users</a></li>
 						<li><a href="#calendar">Calendar</a></li>
-						<li><a href="#signup">Signup</a></li>
-						<li><a href="#login">Log In</a></li>
+						<li ng-if="authenticated" ><a href="#event">Events</a></li>
+						<li ng-if="authenticated"><a href="#user">Users</a></li>
+					</ul>
+					<ul class="nav navbar-nav" style="float: right;">
+						<li ng-if="!authenticated"><a href="#signup">Signup</a></li>
+						<li ng-if="!authenticated"><a href="#login">Log In</a></li>
+						<li ng-click="logout()" ng-if="authenticated"><a href="#logout">Logout</a>"
 					</ul>
 				</div>
 			</div>
@@ -75,7 +78,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="navbar navbar-default navbar-fixed-bottom" "id="this">
+	<div class="navbar navbar-default navbar-fixed-bottom" id="this">
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<div class="navbar-footer">

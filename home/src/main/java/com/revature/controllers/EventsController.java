@@ -56,7 +56,6 @@ public class EventsController {
 		//logger.info("Creating New Event: " + event);
 		HttpSession session = loginService.getSession();
 		Users user = (Users) session.getAttribute("loggedInUser");
-		System.out.println(user.getUserRoleId().getUserRoleId());
 		event.setUser(user);
 		Events validEvent = inputValidationService.validateInput(event);
 		if(user.getUserRoleId().getUserRoleId() == 1){

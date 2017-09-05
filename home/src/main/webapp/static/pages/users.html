@@ -1,5 +1,6 @@
 <div style="max-height: 400px;">
 	<h1>Users Pages</h1>
+	Search: <input type="text" ng-model="in"/>
 	<table class="table table-bordered" >
 		<thead>
 		<th>Name</th>
@@ -7,7 +8,7 @@
 		<th>Registered Events</th>
 		</thead>
 		<tbody>
-			<tr ng-repeat="user in users">
+			<tr ng-repeat="user in users | filter:in">
 				<td>{{user.firstName}} {{user.lastName}}</td>
 				<td>{{user.email}}</td>
 				<td>
