@@ -7,11 +7,10 @@ angular.module("C4C")
 					url : "login",
 					data : $scope.user
 				}).then(function(response) {
-					console.log(response);
 					if(response.status === 200){
 						$rootScope.loggedInUser = response;
 						$rootScope.loggedIn = true;
-						console.log(response);
+						$window.location.reload();
 						$location.path("/home");
 					}
 					if(response.status === 204) {
