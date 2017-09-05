@@ -9,6 +9,10 @@ angular.module("C4C")
 		}else{
 			$scope.authenticated = false;
 		}
+	}, function error(response){
+		if(response.status === 401){
+			console.log(response.status);
+		}
 	});
 	$scope.logout = function(){
 		$http({

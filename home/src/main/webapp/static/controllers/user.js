@@ -5,8 +5,7 @@ angular.module("C4C")
 		}).then(function(response){
 			$scope.users = response.data;
 			$scope.ownedEvents = response.data.ownedEvents;
-			$scope.events = response.data[0].events;
-			$scope.role = response.data[0].userRoleId;
+			console.log(response);
 			if($scope.role.userRoleId === 1){
 				$scope.isAdmin = true;
 			}else{
