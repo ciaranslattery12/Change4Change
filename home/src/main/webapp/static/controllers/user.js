@@ -5,12 +5,6 @@ angular.module("C4C")
 		}).then(function(response){
 			$scope.users = response.data;
 			$scope.ownedEvents = response.data.ownedEvents;
-			console.log(response);
-			if($scope.role.userRoleId === 1){
-				$scope.isAdmin = true;
-			}else{
-				$scope.isAdmin = false;
-			}
 			
 		}, function error(response){
 			if(response.status === 401){

@@ -18,7 +18,7 @@ $scope.register = function(id){
     				method: "PUT", url: "users", data: $scope.user
     			}).then(function(response){
     				if(response.status === 200){
-    				
+    					$window.location.reload();
     				}
     			});
     		});

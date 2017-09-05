@@ -83,7 +83,6 @@ public class EventsController {
 	@RequestMapping(value="/events/find", method=RequestMethod.GET,
 			produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<Events>> findAll(){
-		//logger.info("Finding all events");
 		return new ResponseEntity<List<Events>>(this.eventService.findAll(), HttpStatus.OK);
 	}
 	
@@ -91,10 +90,13 @@ public class EventsController {
 			consumes=MediaType.APPLICATION_JSON_VALUE,
 			produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Events> update(@RequestBody Events event){
+		if(loginService.isLoggedIn()){
 		Events toUpdate = this.eventService.findEvent(event.getEventId());
 		eventService.updateEvent(toUpdate);
 		Events updated = this.eventService.findEvent(toUpdate.getEventId());
 		return new ResponseEntity<Events>(updated, HttpStatus.OK);
+		}else
+			return new ResponseEntity<Events>(HttpStatus.UNAUTHORIZED);
 	}
 	
 	/**
@@ -106,7 +108,12 @@ public class EventsController {
 	 */
 	@RequestMapping(value="/events", method=RequestMethod.DELETE)
 	public ResponseEntity<Void> delete(@RequestHeader Integer id){
+		HttpSession session = loginService.getSession();
+		Users user = (Users) session.getAttribute("loggedInUser");
+		if(user.getUserRoleId().getUserRoleId() == 1){
 		this.eventService.deleteEvent(eventService.findEvent(id));
 		return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+		}else
+			return new ResponseEntity<Void>(HttpStatus.UNAUTHORIZED);
 	}
 }

@@ -62,7 +62,7 @@ public class UsersController {
 	public ResponseEntity<Users> createUser(@Valid @RequestBody Users user){
 		//logger.info("Creating New User: " + user);
 		Users validUser = inputValidationService.validateInput(user);
-		if(inputValidationService.isSignupInputValidated()){
+		if(inputValidationService.isSignupInputValidated() && !loginService.isLoggedIn()){
 		userService.createNewUser(validUser);
 		return new ResponseEntity<Users>(validUser, HttpStatus.CREATED);
 		}else{
@@ -132,6 +132,7 @@ public class UsersController {
 	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED, rollbackFor=Exception.class)
 	public ResponseEntity<Void> updateUser(@Valid @RequestBody Users user){
 		//logger.info("Updating User: " + user);
+		if(loginService.isLoggedIn()){
 		Users updatedUser = userService.findUserById(user.getUsersId());
 		updatedUser.setEvents(user.getEvents());
 		userService.updateUser(updatedUser);
@@ -140,6 +141,8 @@ public class UsersController {
 				updatedUser.getEvents(), updatedUser.getOwnedEvents(), updatedUser.getUserRoleId());
 		session.setAttribute("loggedInUser", sessionUser);
 		return new ResponseEntity<Void>(HttpStatus.OK);
+		}else
+			return new ResponseEntity<Void>(HttpStatus.UNAUTHORIZED);
 	}
 	
 	/**
@@ -154,10 +157,15 @@ public class UsersController {
 	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED, rollbackFor=Exception.class)
 	public ResponseEntity<Void> deleteUser(@PathVariable int userId){
 		//logger.info("Deleting User with id number: " + userId);
+		HttpSession session = loginService.getSession();
+		Users validUser = (Users) session.getAttribute("loggedInUser");
+		if(validUser.getUserRoleId().getUserRoleId() == 1){
 		Users user = new Users();
 		user.setUsersId(userId);
 		userService.deleteUser(user);
 		return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+		}else
+			return new ResponseEntity<Void>(HttpStatus.UNAUTHORIZED);
 	}
 	
 	

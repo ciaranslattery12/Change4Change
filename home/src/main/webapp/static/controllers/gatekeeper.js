@@ -1,6 +1,7 @@
 angular.module("C4C")
 .controller("gatekeeperCtrl", function($scope, $location, $window, $http, $rootScope){
 	$scope.authenticated = false;
+	$scope.isAdmin = false;
 	$http({
 		method: "GET", url: "isLoggedIn" 
 	}).then(function(response){
@@ -8,6 +9,9 @@ angular.module("C4C")
 			$scope.authenticated = true;
 		}else{
 			$scope.authenticated = false;
+		}
+		if(response.data.userRoleId.userRoleId == 1){
+			$scope.isAdmin = true;
 		}
 	}, function error(response){
 		if(response.status === 401){
