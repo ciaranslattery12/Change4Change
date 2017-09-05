@@ -32,5 +32,7 @@ angular.module("C4C")
 		.when("/login", {
 			templateUrl: "pages/login.html",
 			controller: "loginCtrl"
+		}).otherwise({
+			templateUrl: "pages/home.html",
 		});
 	});
