@@ -12,5 +12,10 @@ angular.module("C4C")
 				$scope.isAdmin = false;
 			}
 			
+		}, function error(response){
+			if(response.status === 401){
+				window.alert("you must be logged in to view this material");
+				$location.path("/login");
+			}
 		});
 	});

@@ -109,9 +109,12 @@ public class UsersController {
 	@Transactional(isolation=Isolation.READ_COMMITTED, propagation=Propagation.REQUIRED, rollbackFor=Exception.class)
 	public ResponseEntity<List<Users>> findAllUsers(){
 		//logger.info("Finding all Users in the Database");
-		System.out.println("made it to controller");
+		if(loginService.isLoggedIn()){
 		List<Users> users = userService.findAll();
 		return new ResponseEntity<List<Users>>(users, HttpStatus.OK);
+		}else{
+			return new ResponseEntity<List<Users>>(HttpStatus.UNAUTHORIZED);
+		}
 	}
 	
 	/**
