@@ -8,7 +8,7 @@
 		<th>End Date</th>
 		</thead>
 		<tbody>
-			<tr ng-repeat="event in user.events | filter:in">
+			<tr ng-repeat="event in user.events | filter:in | orderBy: 'startTime'">
 				<td>{{event.eventTitle}}</td>
 				<td>{{event.startTime | date: "short"}}</td>
 				<td>{{event.endTime | date: "short"}}</td>

@@ -33,7 +33,7 @@
 									<th>End Time</th>
 									<th>Event Status</th>
 								</thead>
-									<tr ng-repeat="events in user.events">
+									<tr ng-repeat="events in user.events | orderBy: 'startTime'">
 										<td>{{events.eventTitle}}</td>
 										<td>{{events.startTime | date: "short"}}</td>
 										<td>{{events.endTime | date: "short"}}</td>
