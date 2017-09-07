@@ -21,7 +21,8 @@ public class EventService {
 		this.eventDAOManager = eventDAOManager;
 	}
 
-	@Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)
+	@Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED,
+			rollbackFor=Exception.class)
 	public void createEvent(Events event){
 		//logger.debug("Event saved: " + event);
 		eventDAOManager.create(event);

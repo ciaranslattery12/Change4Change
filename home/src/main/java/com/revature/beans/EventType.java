@@ -18,6 +18,9 @@ public class EventType {
 		super();
 	}
 
+	public EventType(int eventTypeId){
+		this.eventTypeId = eventTypeId;
+	}
 	public EventType(int eventTypeId, String eventTypeDescription) {
 		super();
 		this.eventTypeId = eventTypeId;

@@ -1,4 +1,4 @@
-var app = angular.module("C4C", ["ngRoute", 'ui.calendar']);
+var app = angular.module("C4C", ["ngRoute", 'ui.calendar', 'ngFileUpload']);
 
 angular.module("C4C")
 	.config(function($locationProvider, $routeProvider) {
@@ -15,7 +15,7 @@ angular.module("C4C")
 		})
 		.when("/event", {
 			templateUrl: "pages/event.html",
-			controller: "eventCtrl"
+			controller: "imageCtrl"
 		})
 		.when("/user", {
 			templateUrl: "pages/users.html",
@@ -32,6 +32,10 @@ angular.module("C4C")
 		.when("/login", {
 			templateUrl: "pages/login.html",
 			controller: "loginCtrl"
+		})
+		.when("/profile", {
+			templateUrl: "pages/profile.html", 
+			controller: "profileCtrl"
 		}).otherwise({
 			templateUrl: "pages/home.html",
 		});

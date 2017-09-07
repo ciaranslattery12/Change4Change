@@ -2,7 +2,17 @@ package com.revature.beans;
 
 import java.util.Arrays;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -16,6 +26,7 @@ public class Photos {
 	private int photoId;
 	
 	@Column(name="PHOTO_IMAGE")
+	@Lob
 	private byte[] image;
 	
 	@ManyToOne(cascade=CascadeType.PERSIST, fetch=FetchType.EAGER)
@@ -25,6 +36,10 @@ public class Photos {
 
 	public Photos() {
 		super();
+	}
+	
+	public Photos(byte[] image){
+		this.image = image;
 	}
 	
 	public Photos(int photoId, byte[] image, Events event) {

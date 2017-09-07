@@ -99,6 +99,17 @@ public class Users {
 		this.userRole = userRoleId;
 	}
 	
+	public Users(int usersId, String firstName, String lastName, String email, Set<Events> events,
+			Set<Events> ownedEvents) {
+		super();
+		this.usersId = usersId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.events = events;
+		this.ownedEvents = ownedEvents;
+	}
+
 	public Users(String firstName, String lastName, String userName, String password, String email) {
 		super();
 		this.firstName = firstName;

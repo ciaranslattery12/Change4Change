@@ -28,8 +28,17 @@ app.controller('calendarCtrl', ['$scope', '$http', 'uiCalendarConfig', function 
     	console.log(data);
         $scope.events.slice(0, $scope.events.length);
         angular.forEach(data.data, function (value) {
-            $scope.events.push({
-                title: value.eventTitle,
+        	var length = value.photos.length
+        	if(length > 0){
+        		$scope.hasPhoto = true;
+        		var image = value.photos[0].image;
+        	}
+        	else{
+        		$scope.hasPhoto = false;
+        		var image = undefined;
+        	}
+        	$scope.events.push({
+        		title: value.eventTitle,
                 description: value.eventDescription,
                 start: new Date(parseInt(value.startTime)),
                 end: new Date(parseInt(value.endTime)),
@@ -37,6 +46,7 @@ app.controller('calendarCtrl', ['$scope', '$http', 'uiCalendarConfig', function 
                 endTime: value.endTime,
                 capacity: value.maxCapacity,
                 id: value.eventId,
+                image: image,
 //                allDay : value.IsFullDay,
                 stick: true
             });

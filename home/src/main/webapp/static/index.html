@@ -37,6 +37,9 @@
 <script type="text/javascript" src="controllers/home.js"></script>
 <script type="text/javascript" src="controllers/register.js"></script>
 <script type="text/javascript" src="controllers/gatekeeper.js"></script>
+<script type="text/javascript" src="js/ng-file-upload.js"></script>
+<script type="text/javascript" src="controllers/imagepost.js"></script>
+<script type="text/javascript" src="controllers/profile.js"></script>
 
 <link rel="stylesheet" type="text/css"
 	href="css/fullcalendar.css" />
@@ -65,7 +68,8 @@
 					<ul class="nav navbar-nav" style="float: right;">
 						<li ng-if="!authenticated"><a href="#signup">Signup</a></li>
 						<li ng-if="!authenticated"><a href="#login">Log In</a></li>
-						<li ng-click="logout()" ng-if="authenticated"><a href="#logout">Logout</a>"
+						<li ng-click="logout()" ng-if="authenticated"><a href="#logout">Logout</a>
+						<li ng-if="authenticated"><a href="#profile">Profile</a></li>
 					</ul>
 				</div>
 			</div>
@@ -79,7 +83,7 @@
 		</div>
 	</div>
 	<div class="navbar navbar-default navbar-fixed-bottom" id="this">
-		<nav class="navbar navbar-inverse">
+		<nav class="navbar navbar-inverse navbar-fixed-bottom">
 			<div class="container-fluid">
 				<div class="navbar-footer">
 					<ul class="nav navbar-nav" style="float: right;">

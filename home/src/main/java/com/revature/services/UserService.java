@@ -1,5 +1,6 @@
 package com.revature.services;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,7 +53,12 @@ public class UserService {
 	public List<Users> findAll(){
 		//logger.debug("Finding all users");
 		List<Users> user = userDAOManager.findAll();
-		return user;
+		List<Users> validUsers = new ArrayList<Users>();
+		for(Users u : user){
+			validUsers.add(new Users(u.getUsersId(), u.getFirstName(), u.getLastName(), u.getEmail(),
+					u.getEvents(), u.getOwnedEvents()));
+		}
+		return validUsers;
 	}
 	
 	public Users findUserByUserName(String userName){

@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+<div class="container-fluid">
+	<h1>{{user.firstName}} {{user.lastName}} Profile Page</h1>
+	<label style="padding-bottom:10px;">Search: <input type="text" ng-model="in"/></label>
+	<table class="table table-bordered" style="border-top:10px;" >
+		<thead style="padding-top: 10px;">
+		<th>Registered Events</th>
+		<th>Start Date</th>
+		<th>End Date</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="event in user.events | filter:in">
+				<td>{{event.eventTitle}}</td>
+				<td>{{event.startTime | date: "short"}}</td>
+				<td>{{event.endTime | date: "short"}}</td>
+			</tr>
+		</tbody>
+	</table>
+	<div>
+		<p>{{user.usersBio}}</p>
+	</div>
 
-</body>
-</html>
+</div>

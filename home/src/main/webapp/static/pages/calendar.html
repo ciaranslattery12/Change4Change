@@ -14,6 +14,11 @@
                 	<button class="btn btn-success" ng-click="register(SelectedEvent.id)">
                 	Register</button>
                 </div>
+                <div class="media" ng-if="hasPhoto" ng-hide="SelectedEvent.image === undefined">
+                	<a class="pull-left" href="#"> <img class="media-object"
+						style="height: 200px; width: 200px" data-ng-src="data:image/png;base64,{{SelectedEvent.image}}" />
+					</a>
+                </div>
             </div>
         </div>
     </div>

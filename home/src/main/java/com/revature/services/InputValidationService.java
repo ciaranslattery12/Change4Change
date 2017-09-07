@@ -19,11 +19,11 @@ public class InputValidationService {
 	private static String userNameAndPasswordRegex = "[a-zA-Z0-9_.!?]{4,20}";
 	private static String nameRegex = "[a-zA-Z0-9']{1,25}";
 	private static String emailRegex = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
-	private static String eventTitleRegex = "[a-zA-Z0-9'_ ]{4,50}";
+	private static String eventTitleRegex = "[a-zA-Z0-9'_ -:?!.]{4,50}$";
 	private static String eventCapacityRegex = "^(?:[1-9][0-9]{3}|[1-9][0-9]{2}|[1-9][0-9]|[1-9])$";
 	private static String eventDateRegex = "^([0]\\d|[1][0-2])\\/([0-2]\\d|[3][0-1])\\/([2][01]|[1][6-9])"
 			+ "\\d{2}(\\s([0]\\d|[1][0-2])(\\:[0-5]\\d){1,2})*\\s*([aApP][mM]{0,2})?$";
-	private static String eventDescriptionRegex = "[a-zA-Z0-9_.' ]{8,250}";
+	private static String eventDescriptionRegex = "[a-zA-Z0-9'_ -:?!.]{8,250}";
 	
 	public Users validateInput(Users user){
 		String cleanUsername = Jsoup.clean(user.getUserName(), Whitelist.basic());
