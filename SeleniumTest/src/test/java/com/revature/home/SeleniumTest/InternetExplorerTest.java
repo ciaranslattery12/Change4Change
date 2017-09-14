@@ -12,6 +12,7 @@ public class InternetExplorerTest extends DriverSetup{
 
 	@Before
 	public void setup(){
+		//Testing to setup the IE driver 
 		driver = new HtmlUnitDriver(BrowserVersion.INTERNET_EXPLORER); //option #2:FIREFOX_38
 		driver.setJavascriptEnabled(true);
 		driver.get("http://13.59.180.148:8080/index.html#/login");
