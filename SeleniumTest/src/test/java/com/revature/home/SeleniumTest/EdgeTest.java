@@ -1,6 +1,5 @@
 package com.revature.home.SeleniumTest;
 
-
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -8,8 +7,7 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 
-public class InternetExplorerTest extends DriverSetup{
-
+public class EdgeTest extends DriverSetup{
 	@Before
 	public void setup(){
 		driver = new HtmlUnitDriver(BrowserVersion.INTERNET_EXPLORER); //option #2:FIREFOX_38
