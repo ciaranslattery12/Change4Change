@@ -1,0 +1,371 @@
+[INFO  - 2017-09-15T15:09:24.862Z] GhostDriver - Main - running on port 27913
+[INFO  - 2017-09-15T15:10:11.616Z] GhostDriver - Main - running on port 9956
+[INFO  - 2017-09-15T15:10:12.090Z] Session [f873a520-9a27-11e7-a3a2-952421a5bdf4] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:10:12.090Z] Session [f873a520-9a27-11e7-a3a2-952421a5bdf4] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:10:12.090Z] Session [f873a520-9a27-11e7-a3a2-952421a5bdf4] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:10:12.090Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: f873a520-9a27-11e7-a3a2-952421a5bdf4
+[INFO  - 2017-09-15T15:10:17.467Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2017-09-15T15:10:49.458Z] GhostDriver - Main - running on port 31841
+[INFO  - 2017-09-15T15:10:49.711Z] Session [0ee04e80-9a28-11e7-a858-25888cbe80a6] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:10:49.711Z] Session [0ee04e80-9a28-11e7-a858-25888cbe80a6] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:10:49.712Z] Session [0ee04e80-9a28-11e7-a858-25888cbe80a6] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:10:49.712Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 0ee04e80-9a28-11e7-a858-25888cbe80a6
+[INFO  - 2017-09-15T15:10:51.650Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2017-09-15T15:25:44.932Z] GhostDriver - Main - running on port 16478
+[INFO  - 2017-09-15T15:25:45.465Z] Session [24c9ac30-9a2a-11e7-b66d-fbf321e1a139] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:25:45.465Z] Session [24c9ac30-9a2a-11e7-b66d-fbf321e1a139] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:25:45.465Z] Session [24c9ac30-9a2a-11e7-b66d-fbf321e1a139] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:25:45.465Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 24c9ac30-9a2a-11e7-b66d-fbf321e1a139
+[INFO  - 2017-09-15T15:25:47.364Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2017-09-15T15:35:36.686Z] GhostDriver - Main - running on port 18206
+[INFO  - 2017-09-15T15:35:37.158Z] Session [8576b4f0-9a2b-11e7-bb77-5185c9a1d109] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:35:37.158Z] Session [8576b4f0-9a2b-11e7-bb77-5185c9a1d109] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:35:37.158Z] Session [8576b4f0-9a2b-11e7-bb77-5185c9a1d109] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:35:37.159Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 8576b4f0-9a2b-11e7-bb77-5185c9a1d109
+[ERROR - 2017-09-15T15:35:44.078Z] Session [8576b4f0-9a2b-11e7-bb77-5185c9a1d109] - page.onError - msg: Error: [$compile:tpload] Failed to load template: pages/home.html (HTTP status: -1 )
+http://errors.angularjs.org/1.6.1/$compile/tpload?p0=pages%2Fhome.html&p1=-1&p2=
+[ERROR - 2017-09-15T15:35:44.078Z] Session [8576b4f0-9a2b-11e7-bb77-5185c9a1d109] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[ERROR - 2017-09-15T15:35:49.377Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1505489749369
+[INFO  - 2017-09-15T15:36:21.129Z] GhostDriver - Main - running on port 14209
+[INFO  - 2017-09-15T15:36:21.214Z] Session [9fb96c90-9a2b-11e7-bca8-c35d18bc6500] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:36:21.214Z] Session [9fb96c90-9a2b-11e7-bca8-c35d18bc6500] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:36:21.215Z] Session [9fb96c90-9a2b-11e7-bca8-c35d18bc6500] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:36:21.215Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 9fb96c90-9a2b-11e7-bca8-c35d18bc6500
+[INFO  - 2017-09-15T15:36:22.881Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2017-09-15T15:36:56.212Z] GhostDriver - Main - running on port 21032
+[INFO  - 2017-09-15T15:36:56.628Z] Session [b4d504e0-9a2b-11e7-9c34-53f982e016d4] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:36:56.628Z] Session [b4d504e0-9a2b-11e7-9c34-53f982e016d4] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:36:56.629Z] Session [b4d504e0-9a2b-11e7-9c34-53f982e016d4] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:36:56.629Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: b4d504e0-9a2b-11e7-9c34-53f982e016d4
+[ERROR - 2017-09-15T15:36:58.609Z] Session [b4d504e0-9a2b-11e7-9c34-53f982e016d4] - page.onError - msg: Error: undefined is not an object (evaluating 'response.data.userRoleId.userRoleId')
+http://13.59.180.148:8080/controllers/gatekeeper.js:13:30
+processQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39
+https://code.angularjs.org/1.6.1/angular.js:16692:39
+$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28
+$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36
+$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31
+done@https://code.angularjs.org/1.6.1/angular.js:12210:53
+completeRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15
+requestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24 Possibly unhandled rejection: {"stack":"http://13.59.180.148:8080/controllers/gatekeeper.js:13:30\nprocessQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39\nhttps://code.angularjs.org/1.6.1/angular.js:16692:39\n$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28\n$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36\n$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31\ndone@https://code.angularjs.org/1.6.1/angular.js:12210:53\ncompleteRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15\nrequestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24","line":13,"sourceURL":"http://13.59.180.148:8080/controllers/gatekeeper.js"}
+[ERROR - 2017-09-15T15:36:58.609Z] Session [b4d504e0-9a2b-11e7-9c34-53f982e016d4] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[INFO  - 2017-09-15T15:37:00.343Z] GhostDriver - Main - running on port 15775
+[INFO  - 2017-09-15T15:37:00.654Z] Session [b73b5680-9a2b-11e7-834c-09097608ff5a] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:37:00.654Z] Session [b73b5680-9a2b-11e7-834c-09097608ff5a] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:37:00.654Z] Session [b73b5680-9a2b-11e7-834c-09097608ff5a] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:37:00.654Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: b73b5680-9a2b-11e7-834c-09097608ff5a
+[INFO  - 2017-09-15T15:37:02.375Z] ShutdownReqHand - _handle - About to shutdown
+[ERROR - 2017-09-15T15:37:03.380Z] Session [b4d504e0-9a2b-11e7-9c34-53f982e016d4] - page.onError - msg: Error: [$compile:tpload] Failed to load template: pages/home.html (HTTP status: -1 )
+http://errors.angularjs.org/1.6.1/$compile/tpload?p0=pages%2Fhome.html&p1=-1&p2=
+[ERROR - 2017-09-15T15:37:03.380Z] Session [b4d504e0-9a2b-11e7-9c34-53f982e016d4] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[INFO  - 2017-09-15T15:39:30.567Z] GhostDriver - Main - running on port 44622
+[INFO  - 2017-09-15T15:39:31.061Z] Session [10e178e0-9a2c-11e7-80a0-4bdc52c0680f] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:39:31.065Z] Session [10e178e0-9a2c-11e7-80a0-4bdc52c0680f] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:39:31.065Z] Session [10e178e0-9a2c-11e7-80a0-4bdc52c0680f] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:39:31.065Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 10e178e0-9a2c-11e7-80a0-4bdc52c0680f
+[ERROR - 2017-09-15T15:39:37.381Z] Session [10e178e0-9a2c-11e7-80a0-4bdc52c0680f] - page.onError - msg: Error: [$compile:tpload] Failed to load template: pages/home.html (HTTP status: -1 )
+http://errors.angularjs.org/1.6.1/$compile/tpload?p0=pages%2Fhome.html&p1=-1&p2=
+[ERROR - 2017-09-15T15:39:37.383Z] Session [10e178e0-9a2c-11e7-80a0-4bdc52c0680f] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[ERROR - 2017-09-15T15:39:43.200Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1505489983163
+[INFO  - 2017-09-15T15:40:15.058Z] GhostDriver - Main - running on port 34241
+[INFO  - 2017-09-15T15:40:15.129Z] Session [2b25b720-9a2c-11e7-a2fc-5b5bfe6aed6a] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:40:15.129Z] Session [2b25b720-9a2c-11e7-a2fc-5b5bfe6aed6a] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:40:15.129Z] Session [2b25b720-9a2c-11e7-a2fc-5b5bfe6aed6a] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:40:15.129Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 2b25b720-9a2c-11e7-a2fc-5b5bfe6aed6a
+[INFO  - 2017-09-15T15:40:17.243Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2017-09-15T15:40:36.922Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:40:52.468Z] GhostDriver - Main - running on port 42059
+[INFO  - 2017-09-15T15:40:52.838Z] Session [419ff510-9a2c-11e7-b81b-e39ae195ac3a] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:40:52.838Z] Session [419ff510-9a2c-11e7-b81b-e39ae195ac3a] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:40:52.838Z] Session [419ff510-9a2c-11e7-b81b-e39ae195ac3a] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:40:52.838Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 419ff510-9a2c-11e7-b81b-e39ae195ac3a
+[ERROR - 2017-09-15T15:40:54.808Z] Session [419ff510-9a2c-11e7-b81b-e39ae195ac3a] - page.onError - msg: Error: undefined is not an object (evaluating 'response.data.userRoleId.userRoleId')
+http://13.59.180.148:8080/controllers/gatekeeper.js:13:30
+processQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39
+https://code.angularjs.org/1.6.1/angular.js:16692:39
+$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28
+$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36
+$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31
+done@https://code.angularjs.org/1.6.1/angular.js:12210:53
+completeRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15
+requestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24 Possibly unhandled rejection: {"stack":"http://13.59.180.148:8080/controllers/gatekeeper.js:13:30\nprocessQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39\nhttps://code.angularjs.org/1.6.1/angular.js:16692:39\n$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28\n$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36\n$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31\ndone@https://code.angularjs.org/1.6.1/angular.js:12210:53\ncompleteRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15\nrequestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24","line":13,"sourceURL":"http://13.59.180.148:8080/controllers/gatekeeper.js"}
+[ERROR - 2017-09-15T15:40:54.808Z] Session [419ff510-9a2c-11e7-b81b-e39ae195ac3a] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[ERROR - 2017-09-15T15:41:01.341Z] Session [419ff510-9a2c-11e7-b81b-e39ae195ac3a] - page.onError - msg: Error: [$compile:tpload] Failed to load template: pages/home.html (HTTP status: -1 )
+http://errors.angularjs.org/1.6.1/$compile/tpload?p0=pages%2Fhome.html&p1=-1&p2=
+[ERROR - 2017-09-15T15:41:01.341Z] Session [419ff510-9a2c-11e7-b81b-e39ae195ac3a] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[ERROR - 2017-09-15T15:41:05.096Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1505490065087
+[INFO  - 2017-09-15T15:41:37.758Z] GhostDriver - Main - running on port 24562
+[INFO  - 2017-09-15T15:41:37.985Z] Session [5c88b0b0-9a2c-11e7-9058-d72e6fc22156] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:41:37.986Z] Session [5c88b0b0-9a2c-11e7-9058-d72e6fc22156] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:41:37.986Z] Session [5c88b0b0-9a2c-11e7-9058-d72e6fc22156] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:41:37.986Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 5c88b0b0-9a2c-11e7-9058-d72e6fc22156
+[ERROR - 2017-09-15T15:41:40.121Z] Session [5c88b0b0-9a2c-11e7-9058-d72e6fc22156] - page.onError - msg: Error: undefined is not an object (evaluating 'response.data.userRoleId.userRoleId')
+http://13.59.180.148:8080/controllers/gatekeeper.js:13:30
+processQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39
+https://code.angularjs.org/1.6.1/angular.js:16692:39
+$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28
+$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36
+$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31
+done@https://code.angularjs.org/1.6.1/angular.js:12210:53
+completeRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15
+requestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24 Possibly unhandled rejection: {"stack":"http://13.59.180.148:8080/controllers/gatekeeper.js:13:30\nprocessQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39\nhttps://code.angularjs.org/1.6.1/angular.js:16692:39\n$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28\n$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36\n$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31\ndone@https://code.angularjs.org/1.6.1/angular.js:12210:53\ncompleteRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15\nrequestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24","line":13,"sourceURL":"http://13.59.180.148:8080/controllers/gatekeeper.js"}
+[ERROR - 2017-09-15T15:41:40.121Z] Session [5c88b0b0-9a2c-11e7-9058-d72e6fc22156] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[INFO  - 2017-09-15T15:41:40.209Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2017-09-15T15:41:56.919Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:42:04.247Z] GhostDriver - Main - running on port 5245
+[INFO  - 2017-09-15T15:42:04.733Z] Session [6c7a4380-9a2c-11e7-8c43-e78a681f6567] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:42:04.733Z] Session [6c7a4380-9a2c-11e7-8c43-e78a681f6567] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:42:04.734Z] Session [6c7a4380-9a2c-11e7-8c43-e78a681f6567] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:42:04.734Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 6c7a4380-9a2c-11e7-8c43-e78a681f6567
+[ERROR - 2017-09-15T15:42:06.180Z] Session [6c7a4380-9a2c-11e7-8c43-e78a681f6567] - page.onError - msg: Error: undefined is not an object (evaluating 'response.data.userRoleId.userRoleId')
+http://13.59.180.148:8080/controllers/gatekeeper.js:13:30
+processQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39
+https://code.angularjs.org/1.6.1/angular.js:16692:39
+$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28
+$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36
+$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31
+done@https://code.angularjs.org/1.6.1/angular.js:12210:53
+completeRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15
+requestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24 Possibly unhandled rejection: {"stack":"http://13.59.180.148:8080/controllers/gatekeeper.js:13:30\nprocessQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39\nhttps://code.angularjs.org/1.6.1/angular.js:16692:39\n$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28\n$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36\n$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31\ndone@https://code.angularjs.org/1.6.1/angular.js:12210:53\ncompleteRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15\nrequestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24","line":13,"sourceURL":"http://13.59.180.148:8080/controllers/gatekeeper.js"}
+[ERROR - 2017-09-15T15:42:06.181Z] Session [6c7a4380-9a2c-11e7-8c43-e78a681f6567] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[ERROR - 2017-09-15T15:42:10.777Z] Session [6c7a4380-9a2c-11e7-8c43-e78a681f6567] - page.onError - msg: Error: [$compile:tpload] Failed to load template: pages/home.html (HTTP status: -1 )
+http://errors.angularjs.org/1.6.1/$compile/tpload?p0=pages%2Fhome.html&p1=-1&p2=
+[ERROR - 2017-09-15T15:42:10.778Z] Session [6c7a4380-9a2c-11e7-8c43-e78a681f6567] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[ERROR - 2017-09-15T15:42:16.535Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1505490136495
+[INFO  - 2017-09-15T15:42:48.573Z] GhostDriver - Main - running on port 31186
+[INFO  - 2017-09-15T15:42:48.763Z] Session [86b7cb00-9a2c-11e7-8658-2b9c7c100aa6] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:42:48.766Z] Session [86b7cb00-9a2c-11e7-8658-2b9c7c100aa6] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:42:48.766Z] Session [86b7cb00-9a2c-11e7-8658-2b9c7c100aa6] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:42:48.767Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 86b7cb00-9a2c-11e7-8658-2b9c7c100aa6
+[INFO  - 2017-09-15T15:42:51.299Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2017-09-15T15:43:10.509Z] GhostDriver - Main - running on port 48902
+[INFO  - 2017-09-15T15:43:11.049Z] Session [93ffc1a0-9a2c-11e7-9c00-a127ae501e06] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:43:11.049Z] Session [93ffc1a0-9a2c-11e7-9c00-a127ae501e06] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:43:11.050Z] Session [93ffc1a0-9a2c-11e7-9c00-a127ae501e06] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:43:11.050Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 93ffc1a0-9a2c-11e7-9c00-a127ae501e06
+[ERROR - 2017-09-15T15:43:17.397Z] Session [93ffc1a0-9a2c-11e7-9c00-a127ae501e06] - page.onError - msg: Error: [$compile:tpload] Failed to load template: pages/home.html (HTTP status: -1 )
+http://errors.angularjs.org/1.6.1/$compile/tpload?p0=pages%2Fhome.html&p1=-1&p2=
+[ERROR - 2017-09-15T15:43:17.398Z] Session [93ffc1a0-9a2c-11e7-9c00-a127ae501e06] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[ERROR - 2017-09-15T15:43:23.277Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1505490203230
+[INFO  - 2017-09-15T15:43:54.956Z] GhostDriver - Main - running on port 39031
+[INFO  - 2017-09-15T15:43:55.123Z] Session [ae4622c0-9a2c-11e7-83e5-5d70ceb1a6d7] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:43:55.123Z] Session [ae4622c0-9a2c-11e7-83e5-5d70ceb1a6d7] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:43:55.124Z] Session [ae4622c0-9a2c-11e7-83e5-5d70ceb1a6d7] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:43:55.124Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: ae4622c0-9a2c-11e7-83e5-5d70ceb1a6d7
+[ERROR - 2017-09-15T15:43:56.830Z] Session [ae4622c0-9a2c-11e7-83e5-5d70ceb1a6d7] - page.onError - msg: Error: undefined is not an object (evaluating 'response.data.userRoleId.userRoleId')
+http://13.59.180.148:8080/controllers/gatekeeper.js:13:30
+processQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39
+https://code.angularjs.org/1.6.1/angular.js:16692:39
+$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28
+$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36
+$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31
+done@https://code.angularjs.org/1.6.1/angular.js:12210:53
+completeRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15
+requestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24 Possibly unhandled rejection: {"stack":"http://13.59.180.148:8080/controllers/gatekeeper.js:13:30\nprocessQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39\nhttps://code.angularjs.org/1.6.1/angular.js:16692:39\n$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28\n$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36\n$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31\ndone@https://code.angularjs.org/1.6.1/angular.js:12210:53\ncompleteRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15\nrequestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24","line":13,"sourceURL":"http://13.59.180.148:8080/controllers/gatekeeper.js"}
+[ERROR - 2017-09-15T15:43:56.831Z] Session [ae4622c0-9a2c-11e7-83e5-5d70ceb1a6d7] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[INFO  - 2017-09-15T15:43:56.881Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2017-09-15T15:44:13.381Z] GhostDriver - Main - running on port 4850
+[INFO  - 2017-09-15T15:44:13.819Z] Session [b96b1250-9a2c-11e7-b988-d7d2151be847] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:44:13.819Z] Session [b96b1250-9a2c-11e7-b988-d7d2151be847] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:44:13.820Z] Session [b96b1250-9a2c-11e7-b988-d7d2151be847] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:44:13.820Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: b96b1250-9a2c-11e7-b988-d7d2151be847
+[ERROR - 2017-09-15T15:44:15.504Z] Session [b96b1250-9a2c-11e7-b988-d7d2151be847] - page.onError - msg: Error: undefined is not an object (evaluating 'response.data.userRoleId.userRoleId')
+http://13.59.180.148:8080/controllers/gatekeeper.js:13:30
+processQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39
+https://code.angularjs.org/1.6.1/angular.js:16692:39
+$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28
+$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36
+$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31
+done@https://code.angularjs.org/1.6.1/angular.js:12210:53
+completeRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15
+requestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24 Possibly unhandled rejection: {"stack":"http://13.59.180.148:8080/controllers/gatekeeper.js:13:30\nprocessQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39\nhttps://code.angularjs.org/1.6.1/angular.js:16692:39\n$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28\n$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36\n$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31\ndone@https://code.angularjs.org/1.6.1/angular.js:12210:53\ncompleteRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15\nrequestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24","line":13,"sourceURL":"http://13.59.180.148:8080/controllers/gatekeeper.js"}
+[ERROR - 2017-09-15T15:44:15.504Z] Session [b96b1250-9a2c-11e7-b988-d7d2151be847] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[INFO  - 2017-09-15T15:44:17.312Z] GhostDriver - Main - running on port 23980
+[INFO  - 2017-09-15T15:44:17.467Z] Session [bb974120-9a2c-11e7-89b8-6db21259fb29] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:44:17.467Z] Session [bb974120-9a2c-11e7-89b8-6db21259fb29] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:44:17.467Z] Session [bb974120-9a2c-11e7-89b8-6db21259fb29] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:44:17.469Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: bb974120-9a2c-11e7-89b8-6db21259fb29
+[INFO  - 2017-09-15T15:44:19.388Z] ShutdownReqHand - _handle - About to shutdown
+[ERROR - 2017-09-15T15:44:20.201Z] Session [b96b1250-9a2c-11e7-b988-d7d2151be847] - page.onError - msg: Error: [$compile:tpload] Failed to load template: pages/home.html (HTTP status: -1 )
+http://errors.angularjs.org/1.6.1/$compile/tpload?p0=pages%2Fhome.html&p1=-1&p2=
+[ERROR - 2017-09-15T15:44:20.201Z] Session [b96b1250-9a2c-11e7-b988-d7d2151be847] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[INFO  - 2017-09-15T15:44:30.918Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:45:12.184Z] GhostDriver - Main - running on port 7810
+[INFO  - 2017-09-15T15:45:12.687Z] Session [dc819d90-9a2c-11e7-9385-4f4a480914f1] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:45:12.687Z] Session [dc819d90-9a2c-11e7-9385-4f4a480914f1] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:45:12.687Z] Session [dc819d90-9a2c-11e7-9385-4f4a480914f1] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:45:12.687Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: dc819d90-9a2c-11e7-9385-4f4a480914f1
+[ERROR - 2017-09-15T15:45:14.730Z] Session [dc819d90-9a2c-11e7-9385-4f4a480914f1] - page.onError - msg: Error: undefined is not an object (evaluating 'response.data.userRoleId.userRoleId')
+http://13.59.180.148:8080/controllers/gatekeeper.js:13:30
+processQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39
+https://code.angularjs.org/1.6.1/angular.js:16692:39
+$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28
+$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36
+$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31
+done@https://code.angularjs.org/1.6.1/angular.js:12210:53
+completeRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15
+requestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24 Possibly unhandled rejection: {"stack":"http://13.59.180.148:8080/controllers/gatekeeper.js:13:30\nprocessQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39\nhttps://code.angularjs.org/1.6.1/angular.js:16692:39\n$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28\n$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36\n$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31\ndone@https://code.angularjs.org/1.6.1/angular.js:12210:53\ncompleteRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15\nrequestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24","line":13,"sourceURL":"http://13.59.180.148:8080/controllers/gatekeeper.js"}
+[ERROR - 2017-09-15T15:45:14.730Z] Session [dc819d90-9a2c-11e7-9385-4f4a480914f1] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[ERROR - 2017-09-15T15:45:19.273Z] Session [dc819d90-9a2c-11e7-9385-4f4a480914f1] - page.onError - msg: Error: [$compile:tpload] Failed to load template: pages/home.html (HTTP status: -1 )
+http://errors.angularjs.org/1.6.1/$compile/tpload?p0=pages%2Fhome.html&p1=-1&p2=
+[ERROR - 2017-09-15T15:45:19.275Z] Session [dc819d90-9a2c-11e7-9385-4f4a480914f1] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[ERROR - 2017-09-15T15:45:25.052Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1505490325038
+[INFO  - 2017-09-15T15:45:36.913Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:45:52.914Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:45:56.753Z] GhostDriver - Main - running on port 31112
+[INFO  - 2017-09-15T15:45:56.867Z] Session [f6d6a4b0-9a2c-11e7-90c1-3747eaa74876] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:45:56.867Z] Session [f6d6a4b0-9a2c-11e7-90c1-3747eaa74876] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:45:56.867Z] Session [f6d6a4b0-9a2c-11e7-90c1-3747eaa74876] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:45:56.867Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: f6d6a4b0-9a2c-11e7-90c1-3747eaa74876
+[ERROR - 2017-09-15T15:45:58.675Z] Session [f6d6a4b0-9a2c-11e7-90c1-3747eaa74876] - page.onError - msg: Error: undefined is not an object (evaluating 'response.data.userRoleId.userRoleId')
+http://13.59.180.148:8080/controllers/gatekeeper.js:13:30
+processQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39
+https://code.angularjs.org/1.6.1/angular.js:16692:39
+$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28
+$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36
+$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31
+done@https://code.angularjs.org/1.6.1/angular.js:12210:53
+completeRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15
+requestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24 Possibly unhandled rejection: {"stack":"http://13.59.180.148:8080/controllers/gatekeeper.js:13:30\nprocessQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39\nhttps://code.angularjs.org/1.6.1/angular.js:16692:39\n$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28\n$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36\n$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31\ndone@https://code.angularjs.org/1.6.1/angular.js:12210:53\ncompleteRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15\nrequestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24","line":13,"sourceURL":"http://13.59.180.148:8080/controllers/gatekeeper.js"}
+[ERROR - 2017-09-15T15:45:58.676Z] Session [f6d6a4b0-9a2c-11e7-90c1-3747eaa74876] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[INFO  - 2017-09-15T15:45:58.750Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2017-09-15T15:46:32.905Z] GhostDriver - Main - running on port 40862
+[INFO  - 2017-09-15T15:46:33.566Z] Session [0cb69e70-9a2d-11e7-b2d7-018299f1d0b7] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:46:33.566Z] Session [0cb69e70-9a2d-11e7-b2d7-018299f1d0b7] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:46:33.567Z] Session [0cb69e70-9a2d-11e7-b2d7-018299f1d0b7] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:46:33.567Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 0cb69e70-9a2d-11e7-b2d7-018299f1d0b7
+[ERROR - 2017-09-15T15:46:39.807Z] Session [0cb69e70-9a2d-11e7-b2d7-018299f1d0b7] - page.onError - msg: Error: [$compile:tpload] Failed to load template: pages/home.html (HTTP status: -1 )
+http://errors.angularjs.org/1.6.1/$compile/tpload?p0=pages%2Fhome.html&p1=-1&p2=
+[ERROR - 2017-09-15T15:46:39.807Z] Session [0cb69e70-9a2d-11e7-b2d7-018299f1d0b7] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[ERROR - 2017-09-15T15:46:45.649Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1505490405623
+[INFO  - 2017-09-15T15:46:56.915Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:47:04.240Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:47:17.460Z] GhostDriver - Main - running on port 4910
+[INFO  - 2017-09-15T15:47:17.650Z] Session [26fd74c0-9a2d-11e7-8800-9f3da8311d67] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:47:17.650Z] Session [26fd74c0-9a2d-11e7-8800-9f3da8311d67] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:47:17.650Z] Session [26fd74c0-9a2d-11e7-8800-9f3da8311d67] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:47:17.650Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 26fd74c0-9a2d-11e7-8800-9f3da8311d67
+[INFO  - 2017-09-15T15:47:19.515Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2017-09-15T15:47:52.586Z] GhostDriver - Main - running on port 11428
+[INFO  - 2017-09-15T15:47:53.171Z] Session [3c2987d0-9a2d-11e7-86d2-217811f49b9b] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:47:53.171Z] Session [3c2987d0-9a2d-11e7-86d2-217811f49b9b] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:47:53.171Z] Session [3c2987d0-9a2d-11e7-86d2-217811f49b9b] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:47:53.173Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 3c2987d0-9a2d-11e7-86d2-217811f49b9b
+[ERROR - 2017-09-15T15:47:54.901Z] Session [3c2987d0-9a2d-11e7-86d2-217811f49b9b] - page.onError - msg: Error: undefined is not an object (evaluating 'response.data.userRoleId.userRoleId')
+http://13.59.180.148:8080/controllers/gatekeeper.js:13:30
+processQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39
+https://code.angularjs.org/1.6.1/angular.js:16692:39
+$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28
+$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36
+$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31
+done@https://code.angularjs.org/1.6.1/angular.js:12210:53
+completeRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15
+requestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24 Possibly unhandled rejection: {"stack":"http://13.59.180.148:8080/controllers/gatekeeper.js:13:30\nprocessQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39\nhttps://code.angularjs.org/1.6.1/angular.js:16692:39\n$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28\n$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36\n$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31\ndone@https://code.angularjs.org/1.6.1/angular.js:12210:53\ncompleteRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15\nrequestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24","line":13,"sourceURL":"http://13.59.180.148:8080/controllers/gatekeeper.js"}
+[ERROR - 2017-09-15T15:47:54.902Z] Session [3c2987d0-9a2d-11e7-86d2-217811f49b9b] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[ERROR - 2017-09-15T15:47:59.315Z] Session [3c2987d0-9a2d-11e7-86d2-217811f49b9b] - page.onError - msg: Error: [$compile:tpload] Failed to load template: pages/home.html (HTTP status: -1 )
+http://errors.angularjs.org/1.6.1/$compile/tpload?p0=pages%2Fhome.html&p1=-1&p2=
+[ERROR - 2017-09-15T15:47:59.318Z] Session [3c2987d0-9a2d-11e7-86d2-217811f49b9b] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[ERROR - 2017-09-15T15:48:05.276Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1505490485253
+[INFO  - 2017-09-15T15:48:10.920Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:48:36.941Z] GhostDriver - Main - running on port 41686
+[INFO  - 2017-09-15T15:48:37.155Z] Session [5660a6b0-9a2d-11e7-87d2-454445318051] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:48:37.155Z] Session [5660a6b0-9a2d-11e7-87d2-454445318051] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:48:37.155Z] Session [5660a6b0-9a2d-11e7-87d2-454445318051] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:48:37.155Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 5660a6b0-9a2d-11e7-87d2-454445318051
+[INFO  - 2017-09-15T15:48:38.734Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2017-09-15T15:49:13.389Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:49:30.911Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:49:42.262Z] GhostDriver - Main - running on port 21069
+[INFO  - 2017-09-15T15:49:42.559Z] Session [7d5c5b60-9a2d-11e7-a705-e36a0fc01df4] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:49:42.560Z] Session [7d5c5b60-9a2d-11e7-a705-e36a0fc01df4] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:49:42.561Z] Session [7d5c5b60-9a2d-11e7-a705-e36a0fc01df4] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:49:42.561Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 7d5c5b60-9a2d-11e7-a705-e36a0fc01df4
+[ERROR - 2017-09-15T15:49:48.946Z] Session [7d5c5b60-9a2d-11e7-a705-e36a0fc01df4] - page.onError - msg: Error: [$compile:tpload] Failed to load template: pages/home.html (HTTP status: -1 )
+http://errors.angularjs.org/1.6.1/$compile/tpload?p0=pages%2Fhome.html&p1=-1&p2=
+[ERROR - 2017-09-15T15:49:48.946Z] Session [7d5c5b60-9a2d-11e7-a705-e36a0fc01df4] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[INFO  - 2017-09-15T15:50:12.189Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:50:16.639Z] GhostDriver - Main - running on port 26771
+[INFO  - 2017-09-15T15:50:16.731Z] Session [91b714b0-9a2d-11e7-adc4-73437393f1ff] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:50:16.733Z] Session [91b714b0-9a2d-11e7-adc4-73437393f1ff] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:50:16.744Z] Session [91b714b0-9a2d-11e7-adc4-73437393f1ff] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:50:16.744Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 91b714b0-9a2d-11e7-adc4-73437393f1ff
+[ERROR - 2017-09-15T15:50:18.288Z] Session [91b714b0-9a2d-11e7-adc4-73437393f1ff] - page.onError - msg: Error: undefined is not an object (evaluating 'response.data.userRoleId.userRoleId')
+http://13.59.180.148:8080/controllers/gatekeeper.js:13:30
+processQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39
+https://code.angularjs.org/1.6.1/angular.js:16692:39
+$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28
+$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36
+$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31
+done@https://code.angularjs.org/1.6.1/angular.js:12210:53
+completeRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15
+requestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24 Possibly unhandled rejection: {"stack":"http://13.59.180.148:8080/controllers/gatekeeper.js:13:30\nprocessQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39\nhttps://code.angularjs.org/1.6.1/angular.js:16692:39\n$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28\n$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36\n$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31\ndone@https://code.angularjs.org/1.6.1/angular.js:12210:53\ncompleteRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15\nrequestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24","line":13,"sourceURL":"http://13.59.180.148:8080/controllers/gatekeeper.js"}
+[ERROR - 2017-09-15T15:50:18.289Z] Session [91b714b0-9a2d-11e7-adc4-73437393f1ff] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[INFO  - 2017-09-15T15:50:18.327Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2017-09-15T15:50:36.905Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:50:52.905Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:51:32.904Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:51:41.246Z] GhostDriver - Main - running on port 28123
+[INFO  - 2017-09-15T15:51:41.802Z] Session [c46f6510-9a2d-11e7-bfe1-495a05f33081] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:51:41.802Z] Session [c46f6510-9a2d-11e7-bfe1-495a05f33081] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:51:41.802Z] Session [c46f6510-9a2d-11e7-bfe1-495a05f33081] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:51:41.802Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: c46f6510-9a2d-11e7-bfe1-495a05f33081
+[ERROR - 2017-09-15T15:51:48.179Z] Session [c46f6510-9a2d-11e7-bfe1-495a05f33081] - page.onError - msg: Error: [$compile:tpload] Failed to load template: pages/home.html (HTTP status: -1 )
+http://errors.angularjs.org/1.6.1/$compile/tpload?p0=pages%2Fhome.html&p1=-1&p2=
+[ERROR - 2017-09-15T15:51:48.180Z] Session [c46f6510-9a2d-11e7-bfe1-495a05f33081] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[INFO  - 2017-09-15T15:51:56.910Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:52:04.235Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:52:17.150Z] GhostDriver - Main - running on port 43329
+[INFO  - 2017-09-15T15:52:17.327Z] Session [d99c6280-9a2d-11e7-8aab-d17de58dce46] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T15:52:17.327Z] Session [d99c6280-9a2d-11e7-8aab-d17de58dce46] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T15:52:17.328Z] Session [d99c6280-9a2d-11e7-8aab-d17de58dce46] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T15:52:17.328Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: d99c6280-9a2d-11e7-8aab-d17de58dce46
+[ERROR - 2017-09-15T15:52:19.037Z] Session [d99c6280-9a2d-11e7-8aab-d17de58dce46] - page.onError - msg: Error: undefined is not an object (evaluating 'response.data.userRoleId.userRoleId')
+http://13.59.180.148:8080/controllers/gatekeeper.js:13:30
+processQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39
+https://code.angularjs.org/1.6.1/angular.js:16692:39
+$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28
+$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36
+$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31
+done@https://code.angularjs.org/1.6.1/angular.js:12210:53
+completeRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15
+requestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24 Possibly unhandled rejection: {"stack":"http://13.59.180.148:8080/controllers/gatekeeper.js:13:30\nprocessQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39\nhttps://code.angularjs.org/1.6.1/angular.js:16692:39\n$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28\n$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36\n$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31\ndone@https://code.angularjs.org/1.6.1/angular.js:12210:53\ncompleteRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15\nrequestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24","line":13,"sourceURL":"http://13.59.180.148:8080/controllers/gatekeeper.js"}
+[ERROR - 2017-09-15T15:52:19.037Z] Session [d99c6280-9a2d-11e7-8aab-d17de58dce46] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[INFO  - 2017-09-15T15:52:19.134Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2017-09-15T15:52:52.583Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:53:10.904Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:54:13.384Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:54:30.907Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:54:42.258Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:55:12.180Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:55:36.902Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:55:52.897Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:56:32.901Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:56:41.251Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:56:56.903Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:57:04.224Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:57:52.898Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:58:10.897Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:59:13.369Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T15:59:30.900Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
