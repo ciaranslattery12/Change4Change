@@ -41,7 +41,7 @@ public class ServerTest {
 	   @Test
 	   public void loginAsAdmin(){
 		   WebDriver driver = new HtmlUnitDriver(BrowserVersion.CHROME, true);
-		   driver.get("http://13.59.180.148:8080/index.html#/login");
+		   driver.navigate().to("http://13.59.180.148:8080/index.html#/login");
 		   driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	 
 		   System.out.println(driver.getCurrentUrl());
 		   driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/form/div[1]/input")).sendKeys("pMuldoon20");
