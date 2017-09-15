@@ -369,3 +369,51 @@ requestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24 Possibly unha
 [INFO  - 2017-09-15T15:58:10.897Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
 [INFO  - 2017-09-15T15:59:13.369Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
 [INFO  - 2017-09-15T15:59:30.900Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T16:23:23.976Z] GhostDriver - Main - running on port 25982
+[INFO  - 2017-09-15T16:23:24.365Z] Session [32739f50-9a32-11e7-a3dc-171b522d57a1] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T16:23:24.365Z] Session [32739f50-9a32-11e7-a3dc-171b522d57a1] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T16:23:24.365Z] Session [32739f50-9a32-11e7-a3dc-171b522d57a1] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T16:23:24.365Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 32739f50-9a32-11e7-a3dc-171b522d57a1
+[ERROR - 2017-09-15T16:23:32.546Z] Session [32739f50-9a32-11e7-a3dc-171b522d57a1] - page.onError - msg: Error: [$compile:tpload] Failed to load template: pages/home.html (HTTP status: -1 )
+http://errors.angularjs.org/1.6.1/$compile/tpload?p0=pages%2Fhome.html&p1=-1&p2=
+[ERROR - 2017-09-15T16:23:32.552Z] Session [32739f50-9a32-11e7-a3dc-171b522d57a1] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[INFO  - 2017-09-15T16:24:13.298Z] GhostDriver - Main - running on port 23019
+[INFO  - 2017-09-15T16:24:13.868Z] Session [4ff49200-9a32-11e7-8cd8-45fab773db64] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-15T16:24:13.868Z] Session [4ff49200-9a32-11e7-8cd8-45fab773db64] - page.customHeaders:  - {}
+[INFO  - 2017-09-15T16:24:13.871Z] Session [4ff49200-9a32-11e7-8cd8-45fab773db64] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-15T16:24:13.871Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 4ff49200-9a32-11e7-8cd8-45fab773db64
+[ERROR - 2017-09-15T16:24:16.152Z] Session [4ff49200-9a32-11e7-8cd8-45fab773db64] - page.onError - msg: Error: undefined is not an object (evaluating 'response.data.userRoleId.userRoleId')
+http://13.59.180.148:8080/controllers/gatekeeper.js:13:30
+processQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39
+https://code.angularjs.org/1.6.1/angular.js:16692:39
+$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28
+$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36
+$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31
+done@https://code.angularjs.org/1.6.1/angular.js:12210:53
+completeRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15
+requestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24 Possibly unhandled rejection: {"stack":"http://13.59.180.148:8080/controllers/gatekeeper.js:13:30\nprocessQueue@https://code.angularjs.org/1.6.1/angular.js:16648:39\nhttps://code.angularjs.org/1.6.1/angular.js:16692:39\n$eval@https://code.angularjs.org/1.6.1/angular.js:17972:28\n$digest@https://code.angularjs.org/1.6.1/angular.js:17786:36\n$apply@https://code.angularjs.org/1.6.1/angular.js:18080:31\ndone@https://code.angularjs.org/1.6.1/angular.js:12210:53\ncompleteRequest@https://code.angularjs.org/1.6.1/angular.js:12436:15\nrequestLoaded@https://code.angularjs.org/1.6.1/angular.js:12364:24","line":13,"sourceURL":"http://13.59.180.148:8080/controllers/gatekeeper.js"}
+[ERROR - 2017-09-15T16:24:16.152Z] Session [4ff49200-9a32-11e7-8cd8-45fab773db64] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[ERROR - 2017-09-15T16:24:20.660Z] Session [4ff49200-9a32-11e7-8cd8-45fab773db64] - page.onError - msg: Error: [$compile:tpload] Failed to load template: pages/home.html (HTTP status: -1 )
+http://errors.angularjs.org/1.6.1/$compile/tpload?p0=pages%2Fhome.html&p1=-1&p2=
+[ERROR - 2017-09-15T16:24:20.660Z] Session [4ff49200-9a32-11e7-8cd8-45fab773db64] - page.onError - stack:
+  (anonymous function) (https://code.angularjs.org/1.6.1/angular.js:14328)
+[INFO  - 2017-09-15T16:28:23.976Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T16:29:13.300Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T16:33:23.968Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T16:34:13.293Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T16:38:23.965Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T16:39:13.283Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T16:43:23.957Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T16:44:13.281Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T16:48:23.950Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T16:49:13.274Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T16:53:23.943Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T16:54:13.267Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T16:58:23.933Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T16:59:13.260Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T17:03:23.927Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T17:04:13.253Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T17:08:23.919Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-09-15T17:09:13.255Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
