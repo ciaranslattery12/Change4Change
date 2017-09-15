@@ -17,7 +17,7 @@ public class ServerTest {
 	   @Test
 	   public void openChange4Change() {
 		   WebDriver driver = new HtmlUnitDriver(BrowserVersion.FIREFOX_45);
-	       driver.get("http://localhost:8080/home/index.html");
+	       driver.get("http://home/index.html");
 	       WebElement title = driver.findElement(By.xpath("//title"));
 	       System.out.println("********************************************************");
 	       System.out.println("*" + title.getAttribute("text") + "*");
@@ -28,7 +28,7 @@ public class ServerTest {
 	   @Test
 	   public void openC4C(){
 		   WebDriver driver = new HtmlUnitDriver(BrowserVersion.CHROME);
-		   driver.get("http://localhost:8080/home/index.html");
+		   driver.get("http://home/index.html");
 	       WebElement title = driver.findElement(By.xpath("//title"));
 	       System.out.println("********************************************************");
 	       System.out.println("*" + title.getAttribute("text") + "*");
@@ -39,7 +39,7 @@ public class ServerTest {
 	   @Test
 	   public void loginAsAdmin(){
 		   WebDriver driver = new HtmlUnitDriver(BrowserVersion.CHROME, true);
-		   driver.get("http://localhost:8080/home/index.html#/login");
+		   driver.get("http://home/index.html#/login");
 		   driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/form/div[1]/input")).sendKeys("pMuldoon20");
 		   driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/form/div[2]/input[1]")).sendKeys("password!");
 		   driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/form/div[2]/input[2]")).click();
