@@ -15,7 +15,7 @@ public class ServerTest {
 	   @Test
 	   public void openBlazeMeterTest() {
 		   WebDriver driver = new HtmlUnitDriver(BrowserVersion.FIREFOX_45);
-	       driver.get("http://google.com");
+	       driver.get("localhost:8080/home/index.html");
 	       WebElement title = driver.findElement(By.xpath("//title"));
 	       System.out.println("********************************************************");
 	       System.out.println("*" + title.getAttribute("text") + "*");
