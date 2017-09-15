@@ -2,6 +2,7 @@ package com.revature.home.SeleniumTest;
 
 import static org.junit.Assert.*;
 
+import java.time.zone.ZoneOffsetTransitionRule.TimeDefinition;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Test;
@@ -41,9 +42,9 @@ public class ServerTest {
 	   @Test
 	   public void loginAsAdmin(){
 		   WebDriver driver = new HtmlUnitDriver(BrowserVersion.CHROME, true);
-		   driver.navigate().to("http://13.59.180.148:8080/index.html#/login");
-		   driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	 
+		   driver.get("http://13.59.180.148:8080/index.html#/login");
 		   System.out.println(driver.getCurrentUrl());
+		   driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		   driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/form/div[1]/input")).sendKeys("pMuldoon20");
 		   driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/form/div[2]/input[1]")).sendKeys("password!");
 		   driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/form/div[2]/input[2]")).click();
