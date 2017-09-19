@@ -12,7 +12,7 @@ import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class ServerTest {
-
+//just another test
 //	   @Test
 //	   public void openChange4Change() {
 //		   WebDriver driver = new HtmlUnitDriver(BrowserVersion.FIREFOX_45);
