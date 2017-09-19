@@ -28,7 +28,7 @@ public class ServerTest {
 	   @Test
 	   public void openC4C() throws InterruptedException{
 		   DesiredCapabilities dcaps = new DesiredCapabilities();
-		   dcaps.setCapability("phantom.js.binary", "/usr/local/bin/phantomjs");
+		   dcaps.setCapability("phantom.binary.path", "/usr/local/bin/phantomjs");
 		   WebDriver driver = new PhantomJSDriver(dcaps);
 		   driver.navigate().to("http://13.59.180.148:8080/index.html");
 		   driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -47,7 +47,7 @@ public class ServerTest {
 	   @Test
 	   public void loginAsAdmin(){
 		   DesiredCapabilities dcaps = new DesiredCapabilities();
-		   dcaps.setCapability("phantom.js.binary", "/usr/local/bin/phantomjs");
+		   dcaps.setCapability("phantom.binary.path", "/usr/local/bin/phantomjs");
 		   WebDriver driver = new PhantomJSDriver(dcaps);
 		   driver.get("http://13.59.180.148:8080/index.html#/login");
 		   System.out.println(driver.getCurrentUrl());
