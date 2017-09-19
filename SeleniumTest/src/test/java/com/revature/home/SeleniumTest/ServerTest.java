@@ -2,23 +2,17 @@ package com.revature.home.SeleniumTest;
 
 import static org.junit.Assert.*;
 
-import java.time.zone.ZoneOffsetTransitionRule.TimeDefinition;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
-import org.openqa.selenium.support.FindBy;
-
-import com.gargoylesoftware.htmlunit.BrowserVersion;
-import com.gargoylesoftware.htmlunit.javascript.host.Element;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class ServerTest {
-// just adding a head comment
+
 //	   @Test
 //	   public void openChange4Change() {
 //		   WebDriver driver = new HtmlUnitDriver(BrowserVersion.FIREFOX_45);
@@ -33,7 +27,9 @@ public class ServerTest {
 
 	   @Test
 	   public void openC4C() throws InterruptedException{
-		   WebDriver driver = new PhantomJSDriver();
+		   DesiredCapabilities dcaps = new DesiredCapabilities();
+		   dcaps.setCapability("phantom.js.binary", "/usr/local/bin/phantomjs");
+		   WebDriver driver = new PhantomJSDriver(dcaps);
 		   driver.navigate().to("http://13.59.180.148:8080/index.html");
 		   driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		   System.out.println(driver.getCurrentUrl());
@@ -50,7 +46,9 @@ public class ServerTest {
 
 	   @Test
 	   public void loginAsAdmin(){
-		   WebDriver driver = new PhantomJSDriver();
+		   DesiredCapabilities dcaps = new DesiredCapabilities();
+		   dcaps.setCapability("phantom.js.binary", "/usr/local/bin/phantomjs");
+		   WebDriver driver = new PhantomJSDriver(dcaps);
 		   driver.get("http://13.59.180.148:8080/index.html#/login");
 		   System.out.println(driver.getCurrentUrl());
 		   driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
